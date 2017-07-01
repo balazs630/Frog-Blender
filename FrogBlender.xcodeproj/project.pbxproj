@@ -11,15 +11,19 @@
 		AC1B9D571F07BA3A00D4A1C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
+		AC5B3FE51F07C08800DD8E14 /* speed-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */; };
+		AC5B3FE91F07C0E000DD8E14 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC1B9D511F07BA3A00D4A1C9 /* FrogBlender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrogBlender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1B9D511F07BA3A00D4A1C9 /* Frog Blender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frog Blender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-1.mp4"; path = "Videos/speed-1.mp4"; sourceTree = "<group>"; };
+		AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "Videos/speed-0.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +48,7 @@
 		AC1B9D521F07BA3A00D4A1C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC1B9D511F07BA3A00D4A1C9 /* FrogBlender.app */,
+				AC1B9D511F07BA3A00D4A1C9 /* Frog Blender.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,16 +61,26 @@
 				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
 				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
 				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
+				AC5B3FE31F07C07400DD8E14 /* Videos */,
 			);
 			path = FrogBlender;
+			sourceTree = "<group>";
+		};
+		AC5B3FE31F07C07400DD8E14 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */,
+				AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */,
+			);
+			name = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC1B9D501F07BA3A00D4A1C9 /* FrogBlender */ = {
+		AC1B9D501F07BA3A00D4A1C9 /* Frog Blender */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC1B9D601F07BA3A00D4A1C9 /* Build configuration list for PBXNativeTarget "FrogBlender" */;
+			buildConfigurationList = AC1B9D601F07BA3A00D4A1C9 /* Build configuration list for PBXNativeTarget "Frog Blender" */;
 			buildPhases = (
 				AC1B9D4D1F07BA3A00D4A1C9 /* Sources */,
 				AC1B9D4E1F07BA3A00D4A1C9 /* Frameworks */,
@@ -76,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = FrogBlender;
+			name = "Frog Blender";
 			productName = FrogBlender;
-			productReference = AC1B9D511F07BA3A00D4A1C9 /* FrogBlender.app */;
+			productReference = AC1B9D511F07BA3A00D4A1C9 /* Frog Blender.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC1B9D501F07BA3A00D4A1C9 /* FrogBlender */,
+				AC1B9D501F07BA3A00D4A1C9 /* Frog Blender */,
 			);
 		};
 /* End PBXProject section */
@@ -120,7 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5B3FE91F07C0E000DD8E14 /* speed-0.mp4 in Resources */,
 				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
+				AC5B3FE51F07C08800DD8E14 /* speed-1.mp4 in Resources */,
 				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,13 +297,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC1B9D601F07BA3A00D4A1C9 /* Build configuration list for PBXNativeTarget "FrogBlender" */ = {
+		AC1B9D601F07BA3A00D4A1C9 /* Build configuration list for PBXNativeTarget "Frog Blender" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC1B9D611F07BA3A00D4A1C9 /* Debug */,
 				AC1B9D621F07BA3A00D4A1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
