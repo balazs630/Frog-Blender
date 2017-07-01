@@ -11,8 +11,8 @@
 		AC1B9D571F07BA3A00D4A1C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
-		AC5B3FE51F07C08800DD8E14 /* speed-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */; };
-		AC5B3FE91F07C0E000DD8E14 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */; };
+		AC5B3FEB1F07EA1300DD8E14 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */; };
+		AC5B3FED1F07EA7900DD8E14 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-1.mp4"; path = "Videos/speed-1.mp4"; sourceTree = "<group>"; };
-		AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "Videos/speed-0.mp4"; sourceTree = "<group>"; };
+		AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = Videos/intro.mp4; sourceTree = "<group>"; };
+		AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "Videos/speed-0.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +69,8 @@
 		AC5B3FE31F07C07400DD8E14 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				AC5B3FE81F07C0E000DD8E14 /* speed-0.mp4 */,
-				AC5B3FE41F07C08800DD8E14 /* speed-1.mp4 */,
+				AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */,
+				AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC5B3FE91F07C0E000DD8E14 /* speed-0.mp4 in Resources */,
+				AC5B3FED1F07EA7900DD8E14 /* speed-0.mp4 in Resources */,
+				AC5B3FEB1F07EA1300DD8E14 /* intro.mp4 in Resources */,
 				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
-				AC5B3FE51F07C08800DD8E14 /* speed-1.mp4 in Resources */,
 				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
