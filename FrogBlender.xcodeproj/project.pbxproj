@@ -8,22 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */; };
-		AC1B9D571F07BA3A00D4A1C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */; };
+		AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
 		AC5B3FEB1F07EA1300DD8E14 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */; };
 		AC5B3FED1F07EA7900DD8E14 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */; };
+		AC634C411F08DCCF00D9DB5D /* speed-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC634C401F08DCCF00D9DB5D /* speed-1.mp4 */; };
+		ACD79F511F098703001AD0D3 /* speed-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F481F098703001AD0D3 /* speed-2.mp4 */; };
+		ACD79F521F098703001AD0D3 /* speed-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F491F098703001AD0D3 /* speed-3.mp4 */; };
+		ACD79F531F098703001AD0D3 /* speed-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4A1F098703001AD0D3 /* speed-4.mp4 */; };
+		ACD79F541F098703001AD0D3 /* speed-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4B1F098703001AD0D3 /* speed-5.mp4 */; };
+		ACD79F551F098703001AD0D3 /* speed-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4C1F098703001AD0D3 /* speed-6.mp4 */; };
+		ACD79F561F098703001AD0D3 /* speed-7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4D1F098703001AD0D3 /* speed-7.mp4 */; };
+		ACD79F571F098703001AD0D3 /* speed-8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4E1F098703001AD0D3 /* speed-8.mp4 */; };
+		ACD79F581F098703001AD0D3 /* speed-9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F4F1F098703001AD0D3 /* speed-9.mp4 */; };
+		ACD79F591F098703001AD0D3 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACD79F501F098703001AD0D3 /* speed-10.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC1B9D511F07BA3A00D4A1C9 /* Frog Blender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frog Blender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = Videos/intro.mp4; sourceTree = "<group>"; };
 		AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "Videos/speed-0.mp4"; sourceTree = "<group>"; };
+		AC634C401F08DCCF00D9DB5D /* speed-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-1.mp4"; path = "Videos/speed-1.mp4"; sourceTree = "<group>"; };
+		ACD79F481F098703001AD0D3 /* speed-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-2.mp4"; path = "Videos/speed-2.mp4"; sourceTree = "<group>"; };
+		ACD79F491F098703001AD0D3 /* speed-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-3.mp4"; path = "Videos/speed-3.mp4"; sourceTree = "<group>"; };
+		ACD79F4A1F098703001AD0D3 /* speed-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-4.mp4"; path = "Videos/speed-4.mp4"; sourceTree = "<group>"; };
+		ACD79F4B1F098703001AD0D3 /* speed-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-5.mp4"; path = "Videos/speed-5.mp4"; sourceTree = "<group>"; };
+		ACD79F4C1F098703001AD0D3 /* speed-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-6.mp4"; path = "Videos/speed-6.mp4"; sourceTree = "<group>"; };
+		ACD79F4D1F098703001AD0D3 /* speed-7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-7.mp4"; path = "Videos/speed-7.mp4"; sourceTree = "<group>"; };
+		ACD79F4E1F098703001AD0D3 /* speed-8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-8.mp4"; path = "Videos/speed-8.mp4"; sourceTree = "<group>"; };
+		ACD79F4F1F098703001AD0D3 /* speed-9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-9.mp4"; path = "Videos/speed-9.mp4"; sourceTree = "<group>"; };
+		ACD79F501F098703001AD0D3 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "Videos/speed-10.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
-				AC1B9D561F07BA3A00D4A1C9 /* ViewController.swift */,
+				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
 				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
 				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
 				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
@@ -71,6 +91,16 @@
 			children = (
 				AC5B3FEA1F07EA1300DD8E14 /* intro.mp4 */,
 				AC5B3FEC1F07EA7900DD8E14 /* speed-0.mp4 */,
+				AC634C401F08DCCF00D9DB5D /* speed-1.mp4 */,
+				ACD79F481F098703001AD0D3 /* speed-2.mp4 */,
+				ACD79F491F098703001AD0D3 /* speed-3.mp4 */,
+				ACD79F4A1F098703001AD0D3 /* speed-4.mp4 */,
+				ACD79F4B1F098703001AD0D3 /* speed-5.mp4 */,
+				ACD79F4C1F098703001AD0D3 /* speed-6.mp4 */,
+				ACD79F4D1F098703001AD0D3 /* speed-7.mp4 */,
+				ACD79F4E1F098703001AD0D3 /* speed-8.mp4 */,
+				ACD79F4F1F098703001AD0D3 /* speed-9.mp4 */,
+				ACD79F501F098703001AD0D3 /* speed-10.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -135,8 +165,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC5B3FED1F07EA7900DD8E14 /* speed-0.mp4 in Resources */,
+				ACD79F581F098703001AD0D3 /* speed-9.mp4 in Resources */,
+				ACD79F561F098703001AD0D3 /* speed-7.mp4 in Resources */,
 				AC5B3FEB1F07EA1300DD8E14 /* intro.mp4 in Resources */,
+				ACD79F521F098703001AD0D3 /* speed-3.mp4 in Resources */,
+				ACD79F571F098703001AD0D3 /* speed-8.mp4 in Resources */,
 				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
+				ACD79F541F098703001AD0D3 /* speed-5.mp4 in Resources */,
+				ACD79F591F098703001AD0D3 /* speed-10.mp4 in Resources */,
+				ACD79F531F098703001AD0D3 /* speed-4.mp4 in Resources */,
+				AC634C411F08DCCF00D9DB5D /* speed-1.mp4 in Resources */,
+				ACD79F511F098703001AD0D3 /* speed-2.mp4 in Resources */,
+				ACD79F551F098703001AD0D3 /* speed-6.mp4 in Resources */,
 				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1B9D571F07BA3A00D4A1C9 /* ViewController.swift in Sources */,
+				AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */,
 				AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
