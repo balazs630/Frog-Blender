@@ -40,6 +40,7 @@ class MainViewController: NSViewController {
                             CGPoint(x: 883, y: 204)]
 
     var blenderButtonSize = CGSize(width: 30, height: 30)
+    var btnReplay = NSButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,7 @@ class MainViewController: NSViewController {
                 case "intro":
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
                 case "speed-10":
+                    self.playVideo(fileNamed: "outro", type: "mp4")
                     self.gameOver()
                 default:
                     //Loop the actual video, waiting for user interaction..
@@ -98,11 +100,26 @@ class MainViewController: NSViewController {
     }
 
     func gameOver() {
-        print("GameOver!")
+        let btnReplayImage = NSImage(named: "replay")
+        let imageWidth = btnReplayImage?.size.width
+        let imageHeight = btnReplayImage?.size.height
+
+        btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 800, y: 600), size: CGSize(width: imageWidth!, height: imageHeight!)))
+        btnReplay.image = NSImage(named: "replay")
+        btnReplay.bezelStyle = .rounded
+        btnReplay.sound = NSSound(named: "blender-mixing.m4a")
+        btnReplay.action = #selector(replayGame)
+
+        self.view.addSubview(btnReplay)
+        self.playerView.contentOverlayView?.addSubview(btnReplay)
+    }
+
+    func replayGame() {
+        playVideo(fileNamed: "speed-0", type: "mp4")
+        btnReplay.removeFromSuperview()
     }
 
     override func viewDidAppear() {
-        // Disable green zoom button
         view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
         view.window?.styleMask.remove(NSWindowStyleMask.resizable)
     }
