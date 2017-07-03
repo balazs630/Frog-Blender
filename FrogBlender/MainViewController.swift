@@ -52,10 +52,13 @@ class MainViewController: NSViewController {
                 // Action when the actual video is over
                 switch(self.currentlyPlayedVideoName) {
                 case "intro":
+                    self.initBlenderButtons()
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
+                    self.addBlenderButtons()
                 case "speed-10":
                     self.playVideo(fileNamed: "outro", type: "mp4")
-                    self.gameOver()
+                    self.addReplayButton()
+                    self.removeBlenderButtons()
                 default:
                     //Loop the actual video, waiting for user interaction..
                     self.player.seek(to: kCMTimeZero)
@@ -67,7 +70,7 @@ class MainViewController: NSViewController {
         playVideo(fileNamed: "intro", type: "mp4")
     }
 
-    func initButtons() {
+    func initBlenderButtons() {
         for i in 0...9 {
             blenderButtons[i] = NSButton(frame: NSRect(origin: blenderButtonPos[i], size: blenderButtonSize))
             blenderButtons[i].title = ""
@@ -75,9 +78,20 @@ class MainViewController: NSViewController {
             blenderButtons[i].isTransparent = true
             blenderButtons[i].sound = NSSound(named: "blender-button-pressed.m4a")
             blenderButtons[i].action = #selector(speedButtonClicked(sender:))
+        }
+    }
 
+    func addBlenderButtons() {
+        for i in 0...9 {
+            // Kell mindkettő?
             self.view.addSubview(blenderButtons[i])
             self.playerView.contentOverlayView?.addSubview(blenderButtons[i])
+        }
+    }
+
+    func removeBlenderButtons() {
+        for i in 0...9 {
+            blenderButtons[i].removeFromSuperview()
         }
     }
 
@@ -86,8 +100,6 @@ class MainViewController: NSViewController {
             debugPrint("\(fileNamed).\(type) not found")
             return
         }
-
-        initButtons()
 
         player = AVPlayer(url: URL(fileURLWithPath: path))
         playerView!.player = player
@@ -99,13 +111,13 @@ class MainViewController: NSViewController {
         playVideo(fileNamed: "speed-\(sender.tag)", type: "mp4")
     }
 
-    func gameOver() {
+    func addReplayButton() {
         let btnReplayImage = NSImage(named: "replay")
         let imageWidth = btnReplayImage?.size.width
         let imageHeight = btnReplayImage?.size.height
 
         btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 800, y: 600), size: CGSize(width: imageWidth!, height: imageHeight!)))
-        btnReplay.image = NSImage(named: "replay")
+        btnReplay.image = btnReplayImage
         btnReplay.bezelStyle = .rounded
         btnReplay.sound = NSSound(named: "blender-mixing.m4a")
         btnReplay.action = #selector(replayGame)
@@ -117,6 +129,7 @@ class MainViewController: NSViewController {
     func replayGame() {
         playVideo(fileNamed: "speed-0", type: "mp4")
         btnReplay.removeFromSuperview()
+        addBlenderButtons()
     }
 
     override func viewDidAppear() {
