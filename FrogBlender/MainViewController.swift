@@ -58,9 +58,8 @@ class MainViewController: NSViewController {
                 case "speed-10":
                     self.playVideo(fileNamed: "outro", type: "mp4")
                     self.addReplayButton()
-                    self.removeBlenderButtons()
                 default:
-                    //Loop the actual video, waiting for user interaction..
+                    //Loop the actual video, waiting for user interaction (buttonpress)
                     self.player.seek(to: kCMTimeZero)
                     self.playerView!.player?.play()
                 }
@@ -83,8 +82,6 @@ class MainViewController: NSViewController {
 
     func addBlenderButtons() {
         for i in 0...9 {
-            // Kell mindkettő?
-            self.view.addSubview(blenderButtons[i])
             self.playerView.contentOverlayView?.addSubview(blenderButtons[i])
         }
     }
@@ -109,6 +106,11 @@ class MainViewController: NSViewController {
 
     func speedButtonClicked(sender: NSButton) {
         playVideo(fileNamed: "speed-\(sender.tag)", type: "mp4")
+
+        // No go back from speed-10, remove the blender buttons 
+        if sender.tag == 10 {
+            self.removeBlenderButtons()
+        }
     }
 
     func addReplayButton() {

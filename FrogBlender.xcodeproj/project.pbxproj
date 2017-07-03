@@ -11,19 +11,19 @@
 		AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
-		AC5E4CAC1F098DCB0018D894 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA01F098DCB0018D894 /* intro.mp4 */; };
-		AC5E4CAD1F098DCB0018D894 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA11F098DCB0018D894 /* speed-0.mp4 */; };
-		AC5E4CAE1F098DCB0018D894 /* speed-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA21F098DCB0018D894 /* speed-1.mp4 */; };
-		AC5E4CAF1F098DCB0018D894 /* speed-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA31F098DCB0018D894 /* speed-2.mp4 */; };
-		AC5E4CB01F098DCB0018D894 /* speed-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA41F098DCB0018D894 /* speed-3.mp4 */; };
-		AC5E4CB11F098DCB0018D894 /* speed-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA51F098DCB0018D894 /* speed-4.mp4 */; };
-		AC5E4CB21F098DCB0018D894 /* speed-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA61F098DCB0018D894 /* speed-5.mp4 */; };
-		AC5E4CB31F098DCB0018D894 /* speed-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA71F098DCB0018D894 /* speed-6.mp4 */; };
-		AC5E4CB41F098DCB0018D894 /* speed-7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA81F098DCB0018D894 /* speed-7.mp4 */; };
-		AC5E4CB51F098DCB0018D894 /* speed-8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CA91F098DCB0018D894 /* speed-8.mp4 */; };
-		AC5E4CB61F098DCB0018D894 /* speed-9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CAA1F098DCB0018D894 /* speed-9.mp4 */; };
-		AC5E4CB71F098DCB0018D894 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CAB1F098DCB0018D894 /* speed-10.mp4 */; };
-		AC5E4CB91F09A4F10018D894 /* outro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC5E4CB81F09A4F10018D894 /* outro.mp4 */; };
+		ACCA81A21F0AD7F400C53288 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81951F0AD7F400C53288 /* intro.mp4 */; };
+		ACCA81A31F0AD7F400C53288 /* outro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81961F0AD7F400C53288 /* outro.mp4 */; };
+		ACCA81A41F0AD7F400C53288 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81971F0AD7F400C53288 /* speed-0.mp4 */; };
+		ACCA81A51F0AD7F400C53288 /* speed-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81981F0AD7F400C53288 /* speed-1.mp4 */; };
+		ACCA81A61F0AD7F400C53288 /* speed-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81991F0AD7F400C53288 /* speed-2.mp4 */; };
+		ACCA81A71F0AD7F400C53288 /* speed-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819A1F0AD7F400C53288 /* speed-3.mp4 */; };
+		ACCA81A81F0AD7F400C53288 /* speed-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819B1F0AD7F400C53288 /* speed-4.mp4 */; };
+		ACCA81A91F0AD7F400C53288 /* speed-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819C1F0AD7F400C53288 /* speed-5.mp4 */; };
+		ACCA81AA1F0AD7F400C53288 /* speed-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819D1F0AD7F400C53288 /* speed-6.mp4 */; };
+		ACCA81AB1F0AD7F400C53288 /* speed-7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819E1F0AD7F400C53288 /* speed-7.mp4 */; };
+		ACCA81AC1F0AD7F400C53288 /* speed-8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */; };
+		ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */; };
+		ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,19 +33,19 @@
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC5E4CA01F098DCB0018D894 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = Videos/intro.mp4; sourceTree = "<group>"; };
-		AC5E4CA11F098DCB0018D894 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "Videos/speed-0.mp4"; sourceTree = "<group>"; };
-		AC5E4CA21F098DCB0018D894 /* speed-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-1.mp4"; path = "Videos/speed-1.mp4"; sourceTree = "<group>"; };
-		AC5E4CA31F098DCB0018D894 /* speed-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-2.mp4"; path = "Videos/speed-2.mp4"; sourceTree = "<group>"; };
-		AC5E4CA41F098DCB0018D894 /* speed-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-3.mp4"; path = "Videos/speed-3.mp4"; sourceTree = "<group>"; };
-		AC5E4CA51F098DCB0018D894 /* speed-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-4.mp4"; path = "Videos/speed-4.mp4"; sourceTree = "<group>"; };
-		AC5E4CA61F098DCB0018D894 /* speed-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-5.mp4"; path = "Videos/speed-5.mp4"; sourceTree = "<group>"; };
-		AC5E4CA71F098DCB0018D894 /* speed-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-6.mp4"; path = "Videos/speed-6.mp4"; sourceTree = "<group>"; };
-		AC5E4CA81F098DCB0018D894 /* speed-7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-7.mp4"; path = "Videos/speed-7.mp4"; sourceTree = "<group>"; };
-		AC5E4CA91F098DCB0018D894 /* speed-8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-8.mp4"; path = "Videos/speed-8.mp4"; sourceTree = "<group>"; };
-		AC5E4CAA1F098DCB0018D894 /* speed-9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-9.mp4"; path = "Videos/speed-9.mp4"; sourceTree = "<group>"; };
-		AC5E4CAB1F098DCB0018D894 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "Videos/speed-10.mp4"; sourceTree = "<group>"; };
-		AC5E4CB81F09A4F10018D894 /* outro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = outro.mp4; path = Videos/outro.mp4; sourceTree = "<group>"; };
+		ACCA81951F0AD7F400C53288 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = FrogBlender/Videos/intro.mp4; sourceTree = "<group>"; };
+		ACCA81961F0AD7F400C53288 /* outro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = outro.mp4; path = FrogBlender/Videos/outro.mp4; sourceTree = "<group>"; };
+		ACCA81971F0AD7F400C53288 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "FrogBlender/Videos/speed-0.mp4"; sourceTree = "<group>"; };
+		ACCA81981F0AD7F400C53288 /* speed-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-1.mp4"; path = "FrogBlender/Videos/speed-1.mp4"; sourceTree = "<group>"; };
+		ACCA81991F0AD7F400C53288 /* speed-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-2.mp4"; path = "FrogBlender/Videos/speed-2.mp4"; sourceTree = "<group>"; };
+		ACCA819A1F0AD7F400C53288 /* speed-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-3.mp4"; path = "FrogBlender/Videos/speed-3.mp4"; sourceTree = "<group>"; };
+		ACCA819B1F0AD7F400C53288 /* speed-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-4.mp4"; path = "FrogBlender/Videos/speed-4.mp4"; sourceTree = "<group>"; };
+		ACCA819C1F0AD7F400C53288 /* speed-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-5.mp4"; path = "FrogBlender/Videos/speed-5.mp4"; sourceTree = "<group>"; };
+		ACCA819D1F0AD7F400C53288 /* speed-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-6.mp4"; path = "FrogBlender/Videos/speed-6.mp4"; sourceTree = "<group>"; };
+		ACCA819E1F0AD7F400C53288 /* speed-7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-7.mp4"; path = "FrogBlender/Videos/speed-7.mp4"; sourceTree = "<group>"; };
+		ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-8.mp4"; path = "FrogBlender/Videos/speed-8.mp4"; sourceTree = "<group>"; };
+		ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-9.mp4"; path = "FrogBlender/Videos/speed-9.mp4"; sourceTree = "<group>"; };
+		ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "FrogBlender/Videos/speed-10.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,31 +81,32 @@
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
 				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
 				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
+				ACCA81AF1F0AD7FF00C53288 /* Videos */,
 				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
 				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
-				AC5B3FE31F07C07400DD8E14 /* Videos */,
 			);
 			path = FrogBlender;
 			sourceTree = "<group>";
 		};
-		AC5B3FE31F07C07400DD8E14 /* Videos */ = {
+		ACCA81AF1F0AD7FF00C53288 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				AC5E4CA01F098DCB0018D894 /* intro.mp4 */,
-				AC5E4CA11F098DCB0018D894 /* speed-0.mp4 */,
-				AC5E4CA21F098DCB0018D894 /* speed-1.mp4 */,
-				AC5E4CA31F098DCB0018D894 /* speed-2.mp4 */,
-				AC5E4CA41F098DCB0018D894 /* speed-3.mp4 */,
-				AC5E4CA51F098DCB0018D894 /* speed-4.mp4 */,
-				AC5E4CA61F098DCB0018D894 /* speed-5.mp4 */,
-				AC5E4CA71F098DCB0018D894 /* speed-6.mp4 */,
-				AC5E4CA81F098DCB0018D894 /* speed-7.mp4 */,
-				AC5E4CA91F098DCB0018D894 /* speed-8.mp4 */,
-				AC5E4CAA1F098DCB0018D894 /* speed-9.mp4 */,
-				AC5E4CAB1F098DCB0018D894 /* speed-10.mp4 */,
-				AC5E4CB81F09A4F10018D894 /* outro.mp4 */,
+				ACCA81951F0AD7F400C53288 /* intro.mp4 */,
+				ACCA81961F0AD7F400C53288 /* outro.mp4 */,
+				ACCA81971F0AD7F400C53288 /* speed-0.mp4 */,
+				ACCA81981F0AD7F400C53288 /* speed-1.mp4 */,
+				ACCA81991F0AD7F400C53288 /* speed-2.mp4 */,
+				ACCA819A1F0AD7F400C53288 /* speed-3.mp4 */,
+				ACCA819B1F0AD7F400C53288 /* speed-4.mp4 */,
+				ACCA819C1F0AD7F400C53288 /* speed-5.mp4 */,
+				ACCA819D1F0AD7F400C53288 /* speed-6.mp4 */,
+				ACCA819E1F0AD7F400C53288 /* speed-7.mp4 */,
+				ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */,
+				ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */,
+				ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */,
 			);
 			name = Videos;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,21 +168,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCA81A21F0AD7F400C53288 /* intro.mp4 in Resources */,
+				ACCA81A31F0AD7F400C53288 /* outro.mp4 in Resources */,
+				ACCA81A41F0AD7F400C53288 /* speed-0.mp4 in Resources */,
+				ACCA81A51F0AD7F400C53288 /* speed-1.mp4 in Resources */,
+				ACCA81A61F0AD7F400C53288 /* speed-2.mp4 in Resources */,
+				ACCA81A71F0AD7F400C53288 /* speed-3.mp4 in Resources */,
+				ACCA81A81F0AD7F400C53288 /* speed-4.mp4 in Resources */,
+				ACCA81A91F0AD7F400C53288 /* speed-5.mp4 in Resources */,
+				ACCA81AA1F0AD7F400C53288 /* speed-6.mp4 in Resources */,
+				ACCA81AB1F0AD7F400C53288 /* speed-7.mp4 in Resources */,
+				ACCA81AC1F0AD7F400C53288 /* speed-8.mp4 in Resources */,
+				ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */,
+				ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */,
 				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
 				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
-				AC5E4CAC1F098DCB0018D894 /* intro.mp4 in Resources */,
-				AC5E4CAD1F098DCB0018D894 /* speed-0.mp4 in Resources */,
-				AC5E4CAE1F098DCB0018D894 /* speed-1.mp4 in Resources */,
-				AC5E4CAF1F098DCB0018D894 /* speed-2.mp4 in Resources */,
-				AC5E4CB01F098DCB0018D894 /* speed-3.mp4 in Resources */,
-				AC5E4CB11F098DCB0018D894 /* speed-4.mp4 in Resources */,
-				AC5E4CB21F098DCB0018D894 /* speed-5.mp4 in Resources */,
-				AC5E4CB31F098DCB0018D894 /* speed-6.mp4 in Resources */,
-				AC5E4CB41F098DCB0018D894 /* speed-7.mp4 in Resources */,
-				AC5E4CB51F098DCB0018D894 /* speed-8.mp4 in Resources */,
-				AC5E4CB61F098DCB0018D894 /* speed-9.mp4 in Resources */,
-				AC5E4CB71F098DCB0018D894 /* speed-10.mp4 in Resources */,
-				AC5E4CB91F09A4F10018D894 /* outro.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +313,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = balazs630.FrogBlender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -325,6 +327,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = balazs630.FrogBlender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
