@@ -40,7 +40,10 @@ class MainViewController: NSViewController {
                             CGPoint(x: 883, y: 204)]
 
     var blenderButtonSize = CGSize(width: 30, height: 30)
+
+    var btnPlay = NSButton()
     var btnReplay = NSButton()
+    var btnTurnOff = NSButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +57,7 @@ class MainViewController: NSViewController {
                 case "intro":
                     self.initBlenderButtons()
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
-                    self.addBlenderButtons()
+                    self.addPlayButton()
                 case "speed-10":
                     self.playVideo(fileNamed: "outro", type: "mp4")
                     self.addReplayButton()
@@ -107,31 +110,70 @@ class MainViewController: NSViewController {
     func speedButtonClicked(sender: NSButton) {
         playVideo(fileNamed: "speed-\(sender.tag)", type: "mp4")
 
-        // No go back from speed-10, remove the blender buttons 
+        // No go back from speed-10, remove the blender and Turn Off buttons
         if sender.tag == 10 {
             self.removeBlenderButtons()
+            btnTurnOff.removeFromSuperview()
         }
     }
 
+    func addPlayButton() {
+        let btnPlayImage = NSImage(named: "play-standard")
+        let imageWidth = btnPlayImage?.size.width
+        let imageHeight = btnPlayImage?.size.height
+
+        btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 60, y: 165), size: CGSize(width: imageWidth!, height: imageHeight!)))
+        btnPlay.image = btnPlayImage
+        btnPlay.imagePosition = .imageOnly
+        btnPlay.isBordered = false
+        //btnPlay.sound = NSSound(named: "")
+        btnPlay.action = #selector(startPlaying)
+
+        self.playerView.contentOverlayView?.addSubview(btnPlay)
+
+    }
+
     func addReplayButton() {
-        let btnReplayImage = NSImage(named: "replay")
+        let btnReplayImage = NSImage(named: "play-again-standard")
         let imageWidth = btnReplayImage?.size.width
         let imageHeight = btnReplayImage?.size.height
 
-        btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 800, y: 600), size: CGSize(width: imageWidth!, height: imageHeight!)))
+        btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 1200, y: 100), size: CGSize(width: imageWidth!, height: imageHeight!)))
         btnReplay.image = btnReplayImage
-        btnReplay.bezelStyle = .rounded
-        btnReplay.sound = NSSound(named: "blender-mixing.m4a")
+        btnReplay.imagePosition = .imageOnly
+        btnPlay.isBordered = false
+        //btnReplay.sound = NSSound(named: "")
         btnReplay.action = #selector(replayGame)
 
-        self.view.addSubview(btnReplay)
         self.playerView.contentOverlayView?.addSubview(btnReplay)
+    }
+
+    func addTurnOffButton() {
+        btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 672, y: 198), size: CGSize(width: 65, height: 20)))
+        btnTurnOff.title = ""
+        btnTurnOff.rotate(byDegrees: CGFloat(-15))
+        btnTurnOff.isTransparent = true
+        //btnTurnOff.sound = NSSound(named: "")
+        btnTurnOff.action = #selector(turnOffBlender)
+
+        self.playerView.contentOverlayView?.addSubview(btnTurnOff)
+    }
+
+    func startPlaying() {
+        addBlenderButtons()
+        addTurnOffButton()
+        btnPlay.removeFromSuperview()
     }
 
     func replayGame() {
         playVideo(fileNamed: "speed-0", type: "mp4")
-        btnReplay.removeFromSuperview()
         addBlenderButtons()
+        addTurnOffButton()
+        btnReplay.removeFromSuperview()
+    }
+
+    func turnOffBlender() {
+        //TODO
     }
 
     override func viewDidAppear() {
