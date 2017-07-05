@@ -24,6 +24,14 @@
 		ACCA81AC1F0AD7F400C53288 /* speed-8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */; };
 		ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */; };
 		ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */; };
+		ACCA81C61F0D105900C53288 /* blender-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */; };
+		ACCA81C71F0D105900C53288 /* blender-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */; };
+		ACCA81C81F0D105900C53288 /* outro-blender.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C11F0D105900C53288 /* outro-blender.aac */; };
+		ACCA81C91F0D105900C53288 /* play-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C21F0D105900C53288 /* play-button-hover.aac */; };
+		ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C31F0D105900C53288 /* replay-button-appears.aac */; };
+		ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C41F0D105900C53288 /* replay-button-hover.aac */; };
+		ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */; };
+		ACCA81D11F0D274100C53288 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA81D01F0D274100C53288 /* ButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +54,14 @@
 		ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-8.mp4"; path = "FrogBlender/Videos/speed-8.mp4"; sourceTree = "<group>"; };
 		ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-9.mp4"; path = "FrogBlender/Videos/speed-9.mp4"; sourceTree = "<group>"; };
 		ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "FrogBlender/Videos/speed-10.mp4"; sourceTree = "<group>"; };
+		ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-hover.aac"; path = "FrogBlender/Sounds/blender-button-hover.aac"; sourceTree = "<group>"; };
+		ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-pressed.aac"; path = "FrogBlender/Sounds/blender-button-pressed.aac"; sourceTree = "<group>"; };
+		ACCA81C11F0D105900C53288 /* outro-blender.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "outro-blender.aac"; path = "FrogBlender/Sounds/outro-blender.aac"; sourceTree = "<group>"; };
+		ACCA81C21F0D105900C53288 /* play-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "play-button-hover.aac"; path = "FrogBlender/Sounds/play-button-hover.aac"; sourceTree = "<group>"; };
+		ACCA81C31F0D105900C53288 /* replay-button-appears.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-appears.aac"; path = "FrogBlender/Sounds/replay-button-appears.aac"; sourceTree = "<group>"; };
+		ACCA81C41F0D105900C53288 /* replay-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-hover.aac"; path = "FrogBlender/Sounds/replay-button-hover.aac"; sourceTree = "<group>"; };
+		ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-pressed.aac"; path = "FrogBlender/Sounds/replay-button-pressed.aac"; sourceTree = "<group>"; };
+		ACCA81D01F0D274100C53288 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +95,13 @@
 			isa = PBXGroup;
 			children = (
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
+				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
 				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
-				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
-				ACCA81AF1F0AD7FF00C53288 /* Videos */,
 				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
+				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
 				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
+				ACCA81CD1F0D106000C53288 /* Sounds */,
+				ACCA81AF1F0AD7FF00C53288 /* Videos */,
 			);
 			path = FrogBlender;
 			sourceTree = "<group>";
@@ -106,6 +124,21 @@
 				ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */,
 			);
 			name = Videos;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ACCA81CD1F0D106000C53288 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */,
+				ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */,
+				ACCA81C21F0D105900C53288 /* play-button-hover.aac */,
+				ACCA81C31F0D105900C53288 /* replay-button-appears.aac */,
+				ACCA81C41F0D105900C53288 /* replay-button-hover.aac */,
+				ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */,
+				ACCA81C11F0D105900C53288 /* outro-blender.aac */,
+			);
+			name = Sounds;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -168,6 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
+				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
 				ACCA81A21F0AD7F400C53288 /* intro.mp4 in Resources */,
 				ACCA81A31F0AD7F400C53288 /* outro.mp4 in Resources */,
 				ACCA81A41F0AD7F400C53288 /* speed-0.mp4 in Resources */,
@@ -181,8 +216,13 @@
 				ACCA81AC1F0AD7F400C53288 /* speed-8.mp4 in Resources */,
 				ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */,
 				ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */,
-				AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */,
-				AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */,
+				ACCA81C91F0D105900C53288 /* play-button-hover.aac in Resources */,
+				ACCA81C71F0D105900C53288 /* blender-button-pressed.aac in Resources */,
+				ACCA81C61F0D105900C53288 /* blender-button-hover.aac in Resources */,
+				ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */,
+				ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */,
+				ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */,
+				ACCA81C81F0D105900C53288 /* outro-blender.aac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */,
+				ACCA81D11F0D274100C53288 /* ButtonViewController.swift in Sources */,
 				AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
