@@ -21,18 +21,18 @@ class ButtonViewController: NSViewController {
                                              NSButton(),
                                              NSButton()]
 
-    static var blenderButtonPos = [CGPoint(x: 484, y: 92),
-                                   CGPoint(x: 527, y: 98),
-                                   CGPoint(x: 571, y: 108),
-                                   CGPoint(x: 615, y: 120),
-                                   CGPoint(x: 662, y: 131),
-                                   CGPoint(x: 709, y: 143),
-                                   CGPoint(x: 754, y: 156),
-                                   CGPoint(x: 800, y: 170),
-                                   CGPoint(x: 840, y: 186),
-                                   CGPoint(x: 883, y: 204)]
+    static var blenderButtonPos = [CGPoint(x: 307, y: 58),
+                                   CGPoint(x: 335, y: 62),
+                                   CGPoint(x: 363, y: 68),
+                                   CGPoint(x: 391, y: 76),
+                                   CGPoint(x: 421, y: 84),
+                                   CGPoint(x: 450, y: 91),
+                                   CGPoint(x: 479, y: 99),
+                                   CGPoint(x: 508, y: 108),
+                                   CGPoint(x: 534, y: 118),
+                                   CGPoint(x: 561, y: 130)]
 
-    static var blenderButtonSize = CGSize(width: 30, height: 30)
+    static var blenderButtonSize = CGSize(width: 20, height: 20)
 
     static var btnPlay = NSButton()
     static var btnReplay = NSButton()
@@ -58,36 +58,40 @@ class ButtonViewController: NSViewController {
         }
     }
 
-    class func addPlayButton() -> NSButton {
+    class func addPlayButton(to view: NSViewController) -> NSButton {
         if let btnPlayImage = NSImage(named: "play-standard") {
             let imageWidth = btnPlayImage.size.width
             let imageHeight = btnPlayImage.size.height
 
-            btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 60, y: 165), size: CGSize(width: imageWidth, height: imageHeight)))
+            btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 29, y: 98), size: CGSize(width: imageWidth, height: imageHeight)))
             btnPlay.image = btnPlayImage
             btnPlay.imagePosition = .imageOnly
             btnPlay.isBordered = false
             btnPlay.action = #selector(MainViewController.startPlaying)
+            let area = NSTrackingArea.init(rect: ButtonViewController.btnPlay.bounds, options: [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways], owner: view, userInfo: nil)
+            btnPlay.addTrackingArea(area)
         }
         return btnPlay
     }
 
-    class func addReplayButton() -> NSButton {
+    class func addReplayButton(to view: NSViewController) -> NSButton {
         if let btnReplayImage = NSImage(named: "play-again-standard") {
             let imageWidth = btnReplayImage.size.width
             let imageHeight = btnReplayImage.size.height
 
-            btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 1200, y: 100), size: CGSize(width: imageWidth, height: imageHeight)))
+            btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 754, y: 23), size: CGSize(width: imageWidth, height: imageHeight)))
             btnReplay.image = btnReplayImage
             btnReplay.imagePosition = .imageOnly
             btnReplay.isBordered = false
             btnReplay.action = #selector(MainViewController.replayGame)
+            let area = NSTrackingArea.init(rect: ButtonViewController.btnReplay.bounds, options: [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways], owner: view, userInfo: nil)
+            btnReplay.addTrackingArea(area)
         }
         return btnReplay
     }
 
     class func addTurnOffButton() -> NSButton {
-        btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 672, y: 198), size: CGSize(width: 65, height: 20)))
+        btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 422, y: 125), size: CGSize(width: 50, height: 15)))
         btnTurnOff.title = ""
         btnTurnOff.rotate(byDegrees: CGFloat(-15))
         btnTurnOff.isTransparent = true

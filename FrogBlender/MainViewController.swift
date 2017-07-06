@@ -30,10 +30,11 @@ class MainViewController: NSViewController {
                 case "intro":
                     ButtonViewController.initBlenderButtons()
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
-                    self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton())
+                    self.playerView!.player?.pause()
+                    self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
                 case "speed-10":
                     self.playVideo(fileNamed: "outro", type: "mp4")
-                    self.playerView.contentOverlayView?.addSubview(ButtonViewController.addReplayButton())
+                    self.playerView.contentOverlayView?.addSubview(ButtonViewController.addReplayButton(to: self))
                     self.playSound(fileNamed: "replay-button-appears", type: "aac")
                 default:
                     //Loop the actual video, waiting for user interaction (buttonpress)
@@ -84,6 +85,7 @@ class MainViewController: NSViewController {
 
     func startPlaying() {
         playSound(fileNamed: "play-button-hover", type: "aac")
+        playVideo(fileNamed: "speed-0", type: "mp4")
 
         for button in ButtonViewController.getBlenderButtons() {
             playerView.contentOverlayView?.addSubview(button)
@@ -96,23 +98,33 @@ class MainViewController: NSViewController {
     func replayGame() {
         playSound(fileNamed: "replay-button-pressed", type: "aac")
         playVideo(fileNamed: "speed-0", type: "mp4")
+        self.playerView!.player?.pause()
+        self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
 
-        for button in ButtonViewController.getBlenderButtons() {
-            playerView.contentOverlayView?.addSubview(button)
-        }
-
-        playerView.contentOverlayView?.addSubview(ButtonViewController.addTurnOffButton())
         ButtonViewController.btnReplay.removeFromSuperview()
     }
 
     func turnOffBlender() {
         playSound(fileNamed: "blender-button-pressed", type: "aac")
-        //TODO
+        playVideo(fileNamed: "speed-0", type: "mp4")
+        self.playerView!.player?.pause()
+
+        ButtonViewController.removeBlenderButtons()
+        ButtonViewController.btnTurnOff.removeFromSuperview()
+        self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
     }
 
     override func viewDidAppear() {
         view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
         view.window?.styleMask.remove(NSWindowStyleMask.resizable)
+    }
+    
+    override func mouseEntered(with event: NSEvent) {
+        print("Entered: \(event)")
+    }
+    
+    override func mouseExited(with event: NSEvent) {
+        print("Exited: \(event)")
     }
 
 }
