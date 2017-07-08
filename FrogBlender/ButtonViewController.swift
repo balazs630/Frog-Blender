@@ -40,7 +40,8 @@ class ButtonViewController: NSViewController {
 
     class func initBlenderButtons() {
         for i in 0...blenderButtons.count - 1 {
-            blenderButtons[i] = NSButton(frame: NSRect(origin: blenderButtonPos[i], size: blenderButtonSize))
+            blenderButtons[i] = NSButton(frame: NSRect(origin: blenderButtonPos[i],
+                                                       size: blenderButtonSize))
             blenderButtons[i].title = ""
             blenderButtons[i].tag = i + 1   // tag for which button is pressed (1-10)
             blenderButtons[i].isTransparent = true
@@ -63,35 +64,44 @@ class ButtonViewController: NSViewController {
             let imageWidth = btnPlayImage.size.width
             let imageHeight = btnPlayImage.size.height
 
-            btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 29, y: 98), size: CGSize(width: imageWidth, height: imageHeight)))
+            btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 29, y: 98),
+                                             size: CGSize(width: imageWidth, height: imageHeight)))
             btnPlay.image = btnPlayImage
             btnPlay.imagePosition = .imageOnly
             btnPlay.isBordered = false
             btnPlay.action = #selector(MainViewController.startPlaying)
-            let area = NSTrackingArea.init(rect: ButtonViewController.btnPlay.bounds, options: [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways], owner: view, userInfo: nil)
+            let area = NSTrackingArea.init(rect: btnPlay.bounds,
+                                           options: [.mouseEnteredAndExited, .activeAlways],
+                                           owner: view,
+                                           userInfo: ["btnName": "btnPlay"])
             btnPlay.addTrackingArea(area)
         }
         return btnPlay
     }
 
     class func addReplayButton(to view: NSViewController) -> NSButton {
-        if let btnReplayImage = NSImage(named: "play-again-standard") {
+        if let btnReplayImage = NSImage(named: "replay-standard") {
             let imageWidth = btnReplayImage.size.width
             let imageHeight = btnReplayImage.size.height
 
-            btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 754, y: 23), size: CGSize(width: imageWidth, height: imageHeight)))
+            btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 754, y: 23),
+                                               size: CGSize(width: imageWidth, height: imageHeight)))
             btnReplay.image = btnReplayImage
             btnReplay.imagePosition = .imageOnly
             btnReplay.isBordered = false
             btnReplay.action = #selector(MainViewController.replayGame)
-            let area = NSTrackingArea.init(rect: ButtonViewController.btnReplay.bounds, options: [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways], owner: view, userInfo: nil)
+            let area = NSTrackingArea.init(rect: btnReplay.bounds,
+                                           options: [.mouseEnteredAndExited, .activeAlways],
+                                           owner: view,
+                                           userInfo: ["btnName": "btnReplay"])
             btnReplay.addTrackingArea(area)
         }
         return btnReplay
     }
 
     class func addTurnOffButton() -> NSButton {
-        btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 422, y: 125), size: CGSize(width: 50, height: 15)))
+        btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 422, y: 125),
+                                            size: CGSize(width: 50, height: 15)))
         btnTurnOff.title = ""
         btnTurnOff.rotate(byDegrees: CGFloat(-15))
         btnTurnOff.isTransparent = true

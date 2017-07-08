@@ -22,7 +22,10 @@ class MainViewController: NSViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.videoPlayer.currentItem, queue: nil, using: { (_) in
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
+                                               object: self.videoPlayer.currentItem,
+                                               queue: nil,
+                                               using: { (_) in
             DispatchQueue.main.async {
 
                 // Action when the actual video is over
@@ -84,7 +87,6 @@ class MainViewController: NSViewController {
     }
 
     func startPlaying() {
-        playSound(fileNamed: "play-button-hover", type: "aac")
         playVideo(fileNamed: "speed-0", type: "mp4")
 
         for button in ButtonViewController.getBlenderButtons() {
@@ -118,13 +120,37 @@ class MainViewController: NSViewController {
         view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
         view.window?.styleMask.remove(NSWindowStyleMask.resizable)
     }
-    
+
     override func mouseEntered(with event: NSEvent) {
-        print("Entered: \(event)")
+        // Identify which button triggered the mouseEntered event
+
+        if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
+            switch (buttonName) {
+            case "btnPlay":
+                ButtonViewController.btnPlay.image = NSImage(named: "play-hover")
+                playSound(fileNamed: "play-button-hover", type: "aac")
+            case "btnReplay":
+                ButtonViewController.btnReplay.image = NSImage(named: "replay-hover")
+                playSound(fileNamed: "replay-button-hover", type: "aac")
+            default:
+                print("The given button name is unknown!")
+            }
+        }
     }
-    
+
     override func mouseExited(with event: NSEvent) {
-        print("Exited: \(event)")
+        // Identify which button triggered the mouseEntered event
+
+        if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
+            switch (buttonName) {
+            case "btnPlay":
+                ButtonViewController.btnPlay.image = NSImage(named: "play-standard")
+            case "btnReplay":
+                ButtonViewController.btnReplay.image = NSImage(named: "replay-standard")
+            default:
+                print("The given button name is unknown!")
+            }
+        }
     }
 
 }

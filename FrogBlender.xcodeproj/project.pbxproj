@@ -26,7 +26,6 @@
 		ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */; };
 		ACCA81C61F0D105900C53288 /* blender-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */; };
 		ACCA81C71F0D105900C53288 /* blender-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */; };
-		ACCA81C81F0D105900C53288 /* outro-blender.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C11F0D105900C53288 /* outro-blender.aac */; };
 		ACCA81C91F0D105900C53288 /* play-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C21F0D105900C53288 /* play-button-hover.aac */; };
 		ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C31F0D105900C53288 /* replay-button-appears.aac */; };
 		ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C41F0D105900C53288 /* replay-button-hover.aac */; };
@@ -56,7 +55,6 @@
 		ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "FrogBlender/Videos/speed-10.mp4"; sourceTree = "<group>"; };
 		ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-hover.aac"; path = "FrogBlender/Sounds/blender-button-hover.aac"; sourceTree = "<group>"; };
 		ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-pressed.aac"; path = "FrogBlender/Sounds/blender-button-pressed.aac"; sourceTree = "<group>"; };
-		ACCA81C11F0D105900C53288 /* outro-blender.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "outro-blender.aac"; path = "FrogBlender/Sounds/outro-blender.aac"; sourceTree = "<group>"; };
 		ACCA81C21F0D105900C53288 /* play-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "play-button-hover.aac"; path = "FrogBlender/Sounds/play-button-hover.aac"; sourceTree = "<group>"; };
 		ACCA81C31F0D105900C53288 /* replay-button-appears.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-appears.aac"; path = "FrogBlender/Sounds/replay-button-appears.aac"; sourceTree = "<group>"; };
 		ACCA81C41F0D105900C53288 /* replay-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-hover.aac"; path = "FrogBlender/Sounds/replay-button-hover.aac"; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				ACCA81C31F0D105900C53288 /* replay-button-appears.aac */,
 				ACCA81C41F0D105900C53288 /* replay-button-hover.aac */,
 				ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */,
-				ACCA81C11F0D105900C53288 /* outro-blender.aac */,
 			);
 			name = Sounds;
 			path = ..;
@@ -222,7 +219,6 @@
 				ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */,
 				ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */,
 				ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */,
-				ACCA81C81F0D105900C53288 /* outro-blender.aac in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
