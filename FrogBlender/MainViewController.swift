@@ -50,6 +50,11 @@ class MainViewController: NSViewController {
         playVideo(fileNamed: "intro", type: "mp4")
     }
 
+    override func viewDidAppear() {
+        view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
+        view.window?.styleMask.remove(NSWindowStyleMask.resizable)
+    }
+
     func playVideo(fileNamed: String, type: String) {
         guard let path = Bundle.main.path(forResource: fileNamed, ofType: type) else {
             debugPrint("\(fileNamed).\(type) not found")
@@ -114,11 +119,6 @@ class MainViewController: NSViewController {
         ButtonViewController.removeBlenderButtons()
         ButtonViewController.btnTurnOff.removeFromSuperview()
         self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
-    }
-
-    override func viewDidAppear() {
-        view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
-        view.window?.styleMask.remove(NSWindowStyleMask.resizable)
     }
 
     override func mouseEntered(with event: NSEvent) {
