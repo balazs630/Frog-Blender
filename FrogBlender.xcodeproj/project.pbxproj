@@ -11,6 +11,7 @@
 		AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
+		AC847A101F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */; };
 		ACCA81A21F0AD7F400C53288 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81951F0AD7F400C53288 /* intro.mp4 */; };
 		ACCA81A31F0AD7F400C53288 /* outro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81961F0AD7F400C53288 /* outro.mp4 */; };
 		ACCA81A41F0AD7F400C53288 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81971F0AD7F400C53288 /* speed-0.mp4 */; };
@@ -40,6 +41,7 @@
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerViewExtensions.swift; sourceTree = "<group>"; };
 		ACCA81951F0AD7F400C53288 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = FrogBlender/Videos/intro.mp4; sourceTree = "<group>"; };
 		ACCA81961F0AD7F400C53288 /* outro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = outro.mp4; path = FrogBlender/Videos/outro.mp4; sourceTree = "<group>"; };
 		ACCA81971F0AD7F400C53288 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "FrogBlender/Videos/speed-0.mp4"; sourceTree = "<group>"; };
@@ -92,9 +94,10 @@
 		AC1B9D531F07BA3A00D4A1C9 /* FrogBlender */ = {
 			isa = PBXGroup;
 			children = (
-				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
-				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
 				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
+				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
+				AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */,
+				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
 				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
 				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
 				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC847A101F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift in Sources */,
 				AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */,
 				ACCA81D11F0D274100C53288 /* ButtonViewController.swift in Sources */,
 				AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */,

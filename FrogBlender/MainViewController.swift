@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  FrogBlender
 //
 //  Created by Horváth Balázs on 2017. 07. 01..
@@ -31,7 +31,7 @@ class MainViewController: NSViewController {
                 // Action when the actual video is over
                 switch(self.currentlyPlayedVideoName) {
                 case "intro":
-                    ButtonViewController.initBlenderButtons()
+                    ButtonViewController.initBlenderButtons(to: self)
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
                     self.playerView!.player?.pause()
                     self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
@@ -40,7 +40,7 @@ class MainViewController: NSViewController {
                     self.playerView.contentOverlayView?.addSubview(ButtonViewController.addReplayButton(to: self))
                     self.playSound(fileNamed: "replay-button-appears", type: "aac")
                 default:
-                    //Loop the actual video, waiting for user interaction (buttonpress)
+                    //Loop the actual video, waiting for user interaction (button press)
                     self.videoPlayer.seek(to: kCMTimeZero)
                     self.playerView!.player?.play()
                 }
@@ -89,7 +89,7 @@ class MainViewController: NSViewController {
     func startPlaying() {
         playVideo(fileNamed: "speed-0", type: "mp4")
 
-        for button in ButtonViewController.getBlenderButtons() {
+        for button in ButtonViewController.blenderButtons {
             playerView.contentOverlayView?.addSubview(button)
         }
 
@@ -132,8 +132,10 @@ class MainViewController: NSViewController {
             case "btnReplay":
                 ButtonViewController.btnReplay.image = NSImage(named: "replay-hover")
                 playSound(fileNamed: "replay-button-hover", type: "aac")
+            case "btnBlender":
+                playSound(fileNamed: "blender-button-hover", type: "aac")
             default:
-                print("The given button name is unknown!")
+                print("The given button name: \"\(buttonName)\" is unknown!")
             }
         }
     }
@@ -147,8 +149,10 @@ class MainViewController: NSViewController {
                 ButtonViewController.btnPlay.image = NSImage(named: "play-standard")
             case "btnReplay":
                 ButtonViewController.btnReplay.image = NSImage(named: "replay-standard")
+            case "btnBlender":
+                break
             default:
-                print("The given button name is unknown!")
+                print("The given button name: \"\(buttonName)\" is unknown!")
             }
         }
     }
