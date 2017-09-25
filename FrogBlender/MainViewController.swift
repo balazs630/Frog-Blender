@@ -51,8 +51,8 @@ class MainViewController: NSViewController {
     }
 
     override func viewDidAppear() {
-        view.window?.standardWindowButton(NSWindowButton.zoomButton)?.isEnabled = false
-        view.window?.styleMask.remove(NSWindowStyleMask.resizable)
+        view.window?.standardWindowButton(NSWindow.ButtonType.zoomButton)?.isEnabled = false
+        view.window?.styleMask.remove(NSWindow.StyleMask.resizable)
     }
 
     func playVideo(fileNamed: String, type: String) {
@@ -80,7 +80,7 @@ class MainViewController: NSViewController {
         }
     }
 
-    func speedButtonClicked(sender: NSButton) {
+    @objc func speedButtonClicked(sender: NSButton) {
         playSound(fileNamed: "blender-button-pressed", type: "aac")
         playVideo(fileNamed: "speed-\(sender.tag)", type: "mp4")
 
@@ -91,7 +91,7 @@ class MainViewController: NSViewController {
         }
     }
 
-    func startPlaying() {
+    @objc func startPlaying() {
         playVideo(fileNamed: "speed-0", type: "mp4")
 
         for button in ButtonViewController.blenderButtons {
@@ -102,7 +102,7 @@ class MainViewController: NSViewController {
         ButtonViewController.btnPlay.removeFromSuperview()
     }
 
-    func replayGame() {
+    @objc func replayGame() {
         playSound(fileNamed: "replay-button-pressed", type: "aac")
         playVideo(fileNamed: "speed-0", type: "mp4")
         self.playerView!.player?.pause()
@@ -111,7 +111,7 @@ class MainViewController: NSViewController {
         ButtonViewController.btnReplay.removeFromSuperview()
     }
 
-    func turnOffBlender() {
+    @objc func turnOffBlender() {
         playSound(fileNamed: "blender-button-pressed", type: "aac")
         playVideo(fileNamed: "speed-0", type: "mp4")
         self.playerView!.player?.pause()
@@ -127,10 +127,10 @@ class MainViewController: NSViewController {
         if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
             switch (buttonName) {
             case "btnPlay":
-                ButtonViewController.btnPlay.image = NSImage(named: "play-hover")
+                ButtonViewController.btnPlay.image = NSImage(named: NSImage.Name(rawValue: "play-hover"))
                 playSound(fileNamed: "play-button-hover", type: "aac")
             case "btnReplay":
-                ButtonViewController.btnReplay.image = NSImage(named: "replay-hover")
+                ButtonViewController.btnReplay.image = NSImage(named: NSImage.Name(rawValue: "replay-hover"))
                 playSound(fileNamed: "replay-button-hover", type: "aac")
             case "btnBlender":
                 playSound(fileNamed: "blender-button-hover", type: "aac")
@@ -146,9 +146,9 @@ class MainViewController: NSViewController {
         if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
             switch (buttonName) {
             case "btnPlay":
-                ButtonViewController.btnPlay.image = NSImage(named: "play-standard")
+                ButtonViewController.btnPlay.image = NSImage(named: NSImage.Name(rawValue: "play-standard"))
             case "btnReplay":
-                ButtonViewController.btnReplay.image = NSImage(named: "replay-standard")
+                ButtonViewController.btnReplay.image = NSImage(named: NSImage.Name(rawValue: "replay-standard"))
             case "btnBlender":
                 break
             default:

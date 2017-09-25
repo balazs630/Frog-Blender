@@ -47,7 +47,7 @@ class ButtonViewController: NSViewController {
             blenderButtons[i].isTransparent = true
             blenderButtons[i].action = #selector(MainViewController.speedButtonClicked(sender:))
             let area = NSTrackingArea.init(rect: blenderButtons[i].bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
+                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnBlender"])
             blenderButtons[i].addTrackingArea(area)
@@ -61,7 +61,7 @@ class ButtonViewController: NSViewController {
     }
 
     class func addPlayButton(to view: NSViewController) -> NSButton {
-        if let btnPlayImage = NSImage(named: "play-standard") {
+        if let btnPlayImage = NSImage(named: NSImage.Name(rawValue: "play-standard")) {
             let imageWidth = btnPlayImage.size.width
             let imageHeight = btnPlayImage.size.height
 
@@ -72,7 +72,7 @@ class ButtonViewController: NSViewController {
             btnPlay.isBordered = false
             btnPlay.action = #selector(MainViewController.startPlaying)
             let area = NSTrackingArea.init(rect: btnPlay.bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
+                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnPlay"])
             btnPlay.addTrackingArea(area)
@@ -81,7 +81,7 @@ class ButtonViewController: NSViewController {
     }
 
     class func addReplayButton(to view: NSViewController) -> NSButton {
-        if let btnReplayImage = NSImage(named: "replay-standard") {
+        if let btnReplayImage = NSImage(named: NSImage.Name(rawValue: "replay-standard")) {
             let imageWidth = btnReplayImage.size.width
             let imageHeight = btnReplayImage.size.height
 
@@ -92,7 +92,7 @@ class ButtonViewController: NSViewController {
             btnReplay.isBordered = false
             btnReplay.action = #selector(MainViewController.replayGame)
             let area = NSTrackingArea.init(rect: btnReplay.bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
+                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnReplay"])
             btnReplay.addTrackingArea(area)
