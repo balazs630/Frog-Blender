@@ -14,6 +14,8 @@ However the game is available online, it requires Flash player, so I wanted to m
 Prebuilt copies can be downloaded from the project [releases page](https://github.com/balazs630/Frog-Blender/releases).
 
 ___
+**Done:**
+
 - [x] Ability to start and replay the game
 - [x] Switch the levels with the blender buttons
 - [x] Turn off the blender
@@ -21,4 +23,6 @@ ___
 - [x] Disable space key and mouse scrolling on the AVPlayer to prevent accidental video playback control (seek)
 
 ___
+**Backlog:**
+
 - [ ] Add blender button color change effect on mouseover event
