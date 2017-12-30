@@ -9,17 +9,8 @@
 import Cocoa
 
 class ButtonViewController: NSViewController {
-
-    static var blenderButtons: [NSButton] = [NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton(),
-                                             NSButton()]
+    
+    static var blenderButtons: [NSButton] = Array(repeating: NSButton(), count: 10)
 
     static var blenderButtonsPos = [CGPoint(x: 309, y: 57),
                                    CGPoint(x: 336, y: 61),
