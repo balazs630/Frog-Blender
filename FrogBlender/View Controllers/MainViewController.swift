@@ -10,12 +10,15 @@ import AVKit
 
 class MainViewController: NSViewController {
 
-    @IBOutlet weak var playerView: AVPlayerView!
-
+    // MARK: Properties
     var videoPlayer = AVPlayer()
     var audioPlayer = AVAudioPlayer()
     var currentlyPlayedVideoName = ""
 
+    // MARK: Outlets
+    @IBOutlet weak var playerView: AVPlayerView!
+
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -57,6 +60,7 @@ class MainViewController: NSViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
+    // MARK: - AVPlayer Utility methods
     func playVideo(fileNamed: String, type: String) {
         guard let path = Bundle.main.path(forResource: fileNamed, ofType: type) else {
             debugPrint("\(fileNamed).\(type) not found")
@@ -82,6 +86,7 @@ class MainViewController: NSViewController {
         }
     }
 
+    // MARK: - Button click actions
     @objc func speedButtonClicked(sender: NSButton) {
         playSound(fileNamed: "blender-button-pressed", type: "aac")
         playVideo(fileNamed: "speed-\(sender.tag)", type: "mp4")
@@ -123,6 +128,7 @@ class MainViewController: NSViewController {
         self.playerView.contentOverlayView?.addSubview(ButtonViewController.addPlayButton(to: self))
     }
 
+    // MARK: - Button mouseover actions
     override func mouseEntered(with event: NSEvent) {
         // Identify which button triggered the mouseEntered event
 

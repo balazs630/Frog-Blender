@@ -10,7 +10,8 @@ import Cocoa
 
 class ButtonViewController: NSViewController {
 
-    static var blenderButtons: [NSButton] = Array(repeating: NSButton(), count: 10)
+    // MARK: Constants
+    static var blenderButtons = Array(repeating: NSButton(), count: 10)
 
     static var blenderButtonsPos = [CGPoint(x: 309, y: 57),
                                    CGPoint(x: 336, y: 61),
@@ -29,6 +30,7 @@ class ButtonViewController: NSViewController {
     static var btnReplay = NSButton()
     static var btnTurnOff = NSButton()
 
+    // MARK: - UI NSButton configurations
     class func initBlenderButtons(to view: NSViewController) {
         for index in 0...blenderButtons.count - 1 {
             blenderButtons[index] = NSButton(frame: NSRect(origin: blenderButtonsPos[index],
