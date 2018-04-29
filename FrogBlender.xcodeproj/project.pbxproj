@@ -94,17 +94,57 @@
 		AC1B9D531F07BA3A00D4A1C9 /* FrogBlender */ = {
 			isa = PBXGroup;
 			children = (
-				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
-				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
-				AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */,
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
-				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
-				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
-				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
+				AC925B702095FD2700350103 /* View Controllers */,
+				AC925B742095FD6E00350103 /* Storyboards */,
+				AC925B712095FD3C00350103 /* Extensions */,
+				AC925B722095FD4A00350103 /* Resources */,
+				AC925B732095FD5200350103 /* Supporting Files */,
 				ACCA81CD1F0D106000C53288 /* Sounds */,
 				ACCA81AF1F0AD7FF00C53288 /* Videos */,
 			);
 			path = FrogBlender;
+			sourceTree = "<group>";
+		};
+		AC925B702095FD2700350103 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
+				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AC925B712095FD3C00350103 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC925B722095FD4A00350103 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC925B732095FD5200350103 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC925B742095FD6E00350103 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		ACCA81AF1F0AD7FF00C53288 /* Videos */ = {
@@ -369,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FrogBlender/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrogBlender/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = balazs630.FrogBlender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,7 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FrogBlender/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrogBlender/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = balazs630.FrogBlender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
