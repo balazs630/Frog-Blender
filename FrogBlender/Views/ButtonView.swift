@@ -1,5 +1,5 @@
 //
-//  ButtonViewController.swift
+//  ButtonView.swift
 //  FrogBlender
 //
 //  Created by Horváth Balázs on 2017. 07. 05..
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ButtonViewController: NSViewController {
+class ButtonView: NSView {
 
     // MARK: Constants
     static var blenderButtons = Array(repeating: NSButton(), count: 10)
@@ -38,11 +38,11 @@ class ButtonViewController: NSViewController {
             blenderButtons[index].title = ""
             blenderButtons[index].tag = index + 1   // tag for which blender speed button was pressed (1-10)
             blenderButtons[index].isTransparent = true
-            blenderButtons[index].action = #selector(MainViewController.speedButtonClicked(sender:))
+            blenderButtons[index].action = #selector(GameViewController.speedButtonClicked(sender:))
             let area = NSTrackingArea.init(rect: blenderButtons[index].bounds,
                                            options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
-                                           userInfo: ["btnName": "btnBlender"])
+                                           userInfo: [UserInfoKey.btnName: ButtonType.btnSpeedGear])
             blenderButtons[index].addTrackingArea(area)
         }
     }
@@ -54,7 +54,7 @@ class ButtonViewController: NSViewController {
     }
 
     class func addPlayButton(to view: NSViewController) -> NSButton {
-        if let btnPlayImage = NSImage(named: NSImage.Name(rawValue: "play-standard")) {
+        if let btnPlayImage = NSImage(named: .playStandard) {
             let imageWidth = btnPlayImage.size.width
             let imageHeight = btnPlayImage.size.height
 
@@ -63,18 +63,18 @@ class ButtonViewController: NSViewController {
             btnPlay.image = btnPlayImage
             btnPlay.imagePosition = .imageOnly
             btnPlay.isBordered = false
-            btnPlay.action = #selector(MainViewController.startPlaying)
+            btnPlay.action = #selector(GameViewController.startPlaying)
             let area = NSTrackingArea.init(rect: btnPlay.bounds,
                                            options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
-                                           userInfo: ["btnName": "btnPlay"])
+                                           userInfo: [UserInfoKey.btnName: ButtonType.btnPlay])
             btnPlay.addTrackingArea(area)
         }
         return btnPlay
     }
 
     class func addReplayButton(to view: NSViewController) -> NSButton {
-        if let btnReplayImage = NSImage(named: NSImage.Name(rawValue: "replay-standard")) {
+        if let btnReplayImage = NSImage(named: .replayStandard) {
             let imageWidth = btnReplayImage.size.width
             let imageHeight = btnReplayImage.size.height
 
@@ -83,11 +83,11 @@ class ButtonViewController: NSViewController {
             btnReplay.image = btnReplayImage
             btnReplay.imagePosition = .imageOnly
             btnReplay.isBordered = false
-            btnReplay.action = #selector(MainViewController.replayGame)
+            btnReplay.action = #selector(GameViewController.replayGame)
             let area = NSTrackingArea.init(rect: btnReplay.bounds,
                                            options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
-                                           userInfo: ["btnName": "btnReplay"])
+                                           userInfo: [UserInfoKey.btnName: ButtonType.btnReplay])
             btnReplay.addTrackingArea(area)
         }
         return btnReplay
@@ -99,7 +99,7 @@ class ButtonViewController: NSViewController {
         btnTurnOff.title = ""
         btnTurnOff.rotate(byDegrees: CGFloat(-15))
         btnTurnOff.isTransparent = true
-        btnTurnOff.action = #selector(MainViewController.turnOffBlender)
+        btnTurnOff.action = #selector(GameViewController.turnOffBlender)
 
         return btnTurnOff
     }

@@ -9,7 +9,6 @@
 import AVKit
 
 extension AVPlayerView {
-
     override open func scrollWheel(with event: NSEvent) {
         // Disable scrolling that can cause accidental video playback control (seek)
         return

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */; };
-		AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */; };
+		AC1B9D571F07BA3A00D4A1C9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9D561F07BA3A00D4A1C9 /* GameViewController.swift */; };
 		AC1B9D591F07BA3A00D4A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */; };
 		AC1B9D5C1F07BA3A00D4A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1B9D5A1F07BA3A00D4A1C9 /* Main.storyboard */; };
 		AC847A101F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */; };
+		AC925B772096168F00350103 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC925B762096168F00350103 /* Constants.swift */; };
+		AC925B7920961E8500350103 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC925B7820961E8500350103 /* NSImageExtensions.swift */; };
 		ACCA81A21F0AD7F400C53288 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81951F0AD7F400C53288 /* intro.mp4 */; };
 		ACCA81A31F0AD7F400C53288 /* outro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81961F0AD7F400C53288 /* outro.mp4 */; };
 		ACCA81A41F0AD7F400C53288 /* speed-0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81971F0AD7F400C53288 /* speed-0.mp4 */; };
@@ -25,23 +27,25 @@
 		ACCA81AC1F0AD7F400C53288 /* speed-8.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */; };
 		ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */; };
 		ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */; };
-		ACCA81C61F0D105900C53288 /* blender-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */; };
-		ACCA81C71F0D105900C53288 /* blender-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */; };
+		ACCA81C61F0D105900C53288 /* blender-speed-gear-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81BF1F0D105900C53288 /* blender-speed-gear-button-hover.aac */; };
+		ACCA81C71F0D105900C53288 /* blender-speed-gear-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C01F0D105900C53288 /* blender-speed-gear-button-pressed.aac */; };
 		ACCA81C91F0D105900C53288 /* play-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C21F0D105900C53288 /* play-button-hover.aac */; };
 		ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C31F0D105900C53288 /* replay-button-appears.aac */; };
 		ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C41F0D105900C53288 /* replay-button-hover.aac */; };
 		ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */; };
-		ACCA81D11F0D274100C53288 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA81D01F0D274100C53288 /* ButtonViewController.swift */; };
+		ACCA81D11F0D274100C53288 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA81D01F0D274100C53288 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC1B9D511F07BA3A00D4A1C9 /* Frog Blender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Frog Blender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AC1B9D561F07BA3A00D4A1C9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AC1B9D581F07BA3A00D4A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1B9D5B1F07BA3A00D4A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1B9D5D1F07BA3A00D4A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerViewExtensions.swift; sourceTree = "<group>"; };
+		AC925B762096168F00350103 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC925B7820961E8500350103 /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		ACCA81951F0AD7F400C53288 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = FrogBlender/Videos/intro.mp4; sourceTree = "<group>"; };
 		ACCA81961F0AD7F400C53288 /* outro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = outro.mp4; path = FrogBlender/Videos/outro.mp4; sourceTree = "<group>"; };
 		ACCA81971F0AD7F400C53288 /* speed-0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-0.mp4"; path = "FrogBlender/Videos/speed-0.mp4"; sourceTree = "<group>"; };
@@ -55,13 +59,13 @@
 		ACCA819F1F0AD7F400C53288 /* speed-8.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-8.mp4"; path = "FrogBlender/Videos/speed-8.mp4"; sourceTree = "<group>"; };
 		ACCA81A01F0AD7F400C53288 /* speed-9.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-9.mp4"; path = "FrogBlender/Videos/speed-9.mp4"; sourceTree = "<group>"; };
 		ACCA81A11F0AD7F400C53288 /* speed-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "speed-10.mp4"; path = "FrogBlender/Videos/speed-10.mp4"; sourceTree = "<group>"; };
-		ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-hover.aac"; path = "FrogBlender/Sounds/blender-button-hover.aac"; sourceTree = "<group>"; };
-		ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-button-pressed.aac"; path = "FrogBlender/Sounds/blender-button-pressed.aac"; sourceTree = "<group>"; };
+		ACCA81BF1F0D105900C53288 /* blender-speed-gear-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-speed-gear-button-hover.aac"; path = "FrogBlender/Sounds/blender-speed-gear-button-hover.aac"; sourceTree = "<group>"; };
+		ACCA81C01F0D105900C53288 /* blender-speed-gear-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "blender-speed-gear-button-pressed.aac"; path = "FrogBlender/Sounds/blender-speed-gear-button-pressed.aac"; sourceTree = "<group>"; };
 		ACCA81C21F0D105900C53288 /* play-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "play-button-hover.aac"; path = "FrogBlender/Sounds/play-button-hover.aac"; sourceTree = "<group>"; };
 		ACCA81C31F0D105900C53288 /* replay-button-appears.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-appears.aac"; path = "FrogBlender/Sounds/replay-button-appears.aac"; sourceTree = "<group>"; };
 		ACCA81C41F0D105900C53288 /* replay-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-hover.aac"; path = "FrogBlender/Sounds/replay-button-hover.aac"; sourceTree = "<group>"; };
 		ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-pressed.aac"; path = "FrogBlender/Sounds/replay-button-pressed.aac"; sourceTree = "<group>"; };
-		ACCA81D01F0D274100C53288 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		ACCA81D01F0D274100C53288 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
+				AC925B762096168F00350103 /* Constants.swift */,
+				AC925B7A209641DF00350103 /* Views */,
 				AC925B702095FD2700350103 /* View Controllers */,
 				AC925B742095FD6E00350103 /* Storyboards */,
 				AC925B712095FD3C00350103 /* Extensions */,
@@ -109,8 +115,7 @@
 		AC925B702095FD2700350103 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC1B9D561F07BA3A00D4A1C9 /* MainViewController.swift */,
-				ACCA81D01F0D274100C53288 /* ButtonViewController.swift */,
+				AC1B9D561F07BA3A00D4A1C9 /* GameViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				AC847A0F1F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift */,
+				AC925B7820961E8500350103 /* NSImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,6 +153,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		AC925B7A209641DF00350103 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACCA81D01F0D274100C53288 /* ButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		ACCA81AF1F0AD7FF00C53288 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +185,8 @@
 		ACCA81CD1F0D106000C53288 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA81BF1F0D105900C53288 /* blender-button-hover.aac */,
-				ACCA81C01F0D105900C53288 /* blender-button-pressed.aac */,
+				ACCA81BF1F0D105900C53288 /* blender-speed-gear-button-hover.aac */,
+				ACCA81C01F0D105900C53288 /* blender-speed-gear-button-pressed.aac */,
 				ACCA81C21F0D105900C53288 /* play-button-hover.aac */,
 				ACCA81C31F0D105900C53288 /* replay-button-appears.aac */,
 				ACCA81C41F0D105900C53288 /* replay-button-hover.aac */,
@@ -259,8 +273,8 @@
 				ACCA81AD1F0AD7F400C53288 /* speed-9.mp4 in Resources */,
 				ACCA81AE1F0AD7F400C53288 /* speed-10.mp4 in Resources */,
 				ACCA81C91F0D105900C53288 /* play-button-hover.aac in Resources */,
-				ACCA81C71F0D105900C53288 /* blender-button-pressed.aac in Resources */,
-				ACCA81C61F0D105900C53288 /* blender-button-hover.aac in Resources */,
+				ACCA81C71F0D105900C53288 /* blender-speed-gear-button-pressed.aac in Resources */,
+				ACCA81C61F0D105900C53288 /* blender-speed-gear-button-hover.aac in Resources */,
 				ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */,
 				ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */,
 				ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */,
@@ -291,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC925B772096168F00350103 /* Constants.swift in Sources */,
 				AC847A101F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift in Sources */,
-				AC1B9D571F07BA3A00D4A1C9 /* MainViewController.swift in Sources */,
-				ACCA81D11F0D274100C53288 /* ButtonViewController.swift in Sources */,
+				AC1B9D571F07BA3A00D4A1C9 /* GameViewController.swift in Sources */,
+				ACCA81D11F0D274100C53288 /* ButtonView.swift in Sources */,
+				AC925B7920961E8500350103 /* NSImageExtensions.swift in Sources */,
 				AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
