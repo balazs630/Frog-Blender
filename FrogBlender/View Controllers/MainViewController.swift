@@ -6,9 +6,7 @@
 //  Copyright © 2017. Horváth Balázs. All rights reserved.
 //
 
-import Cocoa
 import AVKit
-import AVFoundation
 
 class MainViewController: NSViewController {
 
@@ -29,7 +27,7 @@ class MainViewController: NSViewController {
             DispatchQueue.main.async {
 
                 // Action when the actual video is over
-                switch(self.currentlyPlayedVideoName) {
+                switch self.currentlyPlayedVideoName {
                 case "intro":
                     ButtonViewController.initBlenderButtons(to: self)
                     self.playVideo(fileNamed: "speed-0", type: "mp4")
@@ -51,8 +49,12 @@ class MainViewController: NSViewController {
     }
 
     override func viewDidAppear() {
-        view.window?.standardWindowButton(NSWindow.ButtonType.zoomButton)?.isEnabled = false
-        view.window?.styleMask.remove(NSWindow.StyleMask.resizable)
+        view.window?.standardWindowButton(.zoomButton)?.isEnabled = false
+        view.window?.styleMask.remove(.resizable)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     func playVideo(fileNamed: String, type: String) {
@@ -125,7 +127,7 @@ class MainViewController: NSViewController {
         // Identify which button triggered the mouseEntered event
 
         if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
-            switch (buttonName) {
+            switch buttonName {
             case "btnPlay":
                 ButtonViewController.btnPlay.image = NSImage(named: NSImage.Name(rawValue: "play-hover"))
                 playSound(fileNamed: "play-button-hover", type: "aac")
@@ -144,7 +146,7 @@ class MainViewController: NSViewController {
         // Identify which button triggered the mouseEntered event
 
         if let buttonName = event.trackingArea?.userInfo?.values.first as? String {
-            switch (buttonName) {
+            switch buttonName {
             case "btnPlay":
                 ButtonViewController.btnPlay.image = NSImage(named: NSImage.Name(rawValue: "play-standard"))
             case "btnReplay":

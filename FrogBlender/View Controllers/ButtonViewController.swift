@@ -9,7 +9,7 @@
 import Cocoa
 
 class ButtonViewController: NSViewController {
-    
+
     static var blenderButtons: [NSButton] = Array(repeating: NSButton(), count: 10)
 
     static var blenderButtonsPos = [CGPoint(x: 309, y: 57),
@@ -30,24 +30,24 @@ class ButtonViewController: NSViewController {
     static var btnTurnOff = NSButton()
 
     class func initBlenderButtons(to view: NSViewController) {
-        for i in 0...blenderButtons.count - 1 {
-            blenderButtons[i] = NSButton(frame: NSRect(origin: blenderButtonsPos[i],
+        for index in 0...blenderButtons.count - 1 {
+            blenderButtons[index] = NSButton(frame: NSRect(origin: blenderButtonsPos[index],
                                                        size: blenderButtonSize))
-            blenderButtons[i].title = ""
-            blenderButtons[i].tag = i + 1   // tag for which blender speed button was pressed (1-10)
-            blenderButtons[i].isTransparent = true
-            blenderButtons[i].action = #selector(MainViewController.speedButtonClicked(sender:))
-            let area = NSTrackingArea.init(rect: blenderButtons[i].bounds,
-                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
+            blenderButtons[index].title = ""
+            blenderButtons[index].tag = index + 1   // tag for which blender speed button was pressed (1-10)
+            blenderButtons[index].isTransparent = true
+            blenderButtons[index].action = #selector(MainViewController.speedButtonClicked(sender:))
+            let area = NSTrackingArea.init(rect: blenderButtons[index].bounds,
+                                           options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnBlender"])
-            blenderButtons[i].addTrackingArea(area)
+            blenderButtons[index].addTrackingArea(area)
         }
     }
 
     class func removeBlenderButtons() {
-        for i in 0...blenderButtons.count - 1 {
-            blenderButtons[i].removeFromSuperview()
+        for index in 0...blenderButtons.count - 1 {
+            blenderButtons[index].removeFromSuperview()
         }
     }
 
@@ -63,7 +63,7 @@ class ButtonViewController: NSViewController {
             btnPlay.isBordered = false
             btnPlay.action = #selector(MainViewController.startPlaying)
             let area = NSTrackingArea.init(rect: btnPlay.bounds,
-                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
+                                           options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnPlay"])
             btnPlay.addTrackingArea(area)
@@ -83,7 +83,7 @@ class ButtonViewController: NSViewController {
             btnReplay.isBordered = false
             btnReplay.action = #selector(MainViewController.replayGame)
             let area = NSTrackingArea.init(rect: btnReplay.bounds,
-                                           options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways],
+                                           options: [.mouseEnteredAndExited, .activeAlways],
                                            owner: view,
                                            userInfo: ["btnName": "btnReplay"])
             btnReplay.addTrackingArea(area)
