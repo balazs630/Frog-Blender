@@ -84,7 +84,7 @@ extension GameViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
             audioPlayer.play()
         } catch {
-            print(error)
+            NSLog(error.localizedDescription)
         }
     }
 }
