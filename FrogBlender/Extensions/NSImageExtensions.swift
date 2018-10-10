@@ -10,6 +10,6 @@ import Cocoa
 
 public extension NSImage {
     convenience internal init!(named: ImageAssetIdentifier) {
-        self.init(named: NSImage.Name(rawValue: named.rawValue) )
+        self.init(named: named.rawValue)
     }
 }

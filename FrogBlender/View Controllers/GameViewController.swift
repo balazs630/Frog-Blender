@@ -14,7 +14,7 @@ class GameViewController: NSViewController {
     var videoPlayer = AVPlayer()
     var audioPlayer = AVAudioPlayer()
     var currentlyPlayedVideoName = VideoAssetIdentifier.intro
-    var observer: Any?
+    var videoPlaybackObserver: Any?
 
     // MARK: Outlets
     @IBOutlet weak var playerView: AVPlayerView!
@@ -23,15 +23,38 @@ class GameViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        observer = NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
-                                               object: self.videoPlayer.currentItem,
-                                               queue: nil,
-                                               using: { (_) in
+        configureSelf()
+        observeVideoDidPlayToEndTime()
+        playVideo(fileNamed: .intro)
+    }
+
+    deinit {
+        if let observer = videoPlaybackObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
+}
+
+// MARK: - Screen configuration
+extension GameViewController {
+    func configureSelf() {
+        view.window?.standardWindowButton(.zoomButton)?.isEnabled = false
+        view.window?.styleMask.remove(.resizable)
+    }
+}
+
+// MARK: - AVPlayer Utility methods
+extension GameViewController {
+    private func observeVideoDidPlayToEndTime() {
+        videoPlaybackObserver = NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
+                                                                       object: self.videoPlayer.currentItem,
+                                                                       queue: nil,
+                                                                       using: { (_) in
             DispatchQueue.main.async {
-                // Action when the actual video is over
+            // Action when the actual video is over
                 switch self.currentlyPlayedVideoName {
                 case .intro:
-                    ButtonView.initBlenderButtons(to: self)
+                    ButtonView.addBlenderButtons(to: self)
                     self.playVideo(fileNamed: .speed0)
                     self.playerView!.player?.pause()
                     self.playerView.contentOverlayView?.addSubview(ButtonView.addPlayButton(to: self))
@@ -41,27 +64,13 @@ class GameViewController: NSViewController {
                     self.playSound(fileNamed: .replayButtonAppears)
                 default:
                     // Loop the actual video, waiting for user interaction (button press)
-                    self.videoPlayer.seek(to: kCMTimeZero)
+                    self.videoPlayer.seek(to: CMTime.zero)
                     self.playerView!.player?.play()
                 }
             }
         })
-
-        playVideo(fileNamed: .intro)
     }
 
-    override func viewDidAppear() {
-        view.window?.standardWindowButton(.zoomButton)?.isEnabled = false
-        view.window?.styleMask.remove(.resizable)
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(observer!)
-    }
-}
-
-// MARK: - AVPlayer Utility methods
-extension GameViewController {
     private func playVideo(fileNamed: VideoAssetIdentifier, type: FileType = .mp4) {
         guard let path = Bundle.main.path(forResource: fileNamed.rawValue, ofType: type.rawValue) else {
             debugPrint("\(fileNamed).\(type) not found")
@@ -115,7 +124,7 @@ extension GameViewController {
             playerView.contentOverlayView?.addSubview(button)
         }
 
-        playerView.contentOverlayView?.addSubview(ButtonView.addTurnOffButton())
+        playerView.contentOverlayView?.addSubview(ButtonView.makeTurnOffButton())
         ButtonView.btnPlay.removeFromSuperview()
     }
 

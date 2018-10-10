@@ -13,16 +13,18 @@ class ButtonView: NSView {
     // MARK: Constants
     static var blenderButtons = Array(repeating: NSButton(), count: 10)
 
-    static var blenderButtonsPos = [CGPoint(x: 309, y: 57),
-                                   CGPoint(x: 336, y: 61),
-                                   CGPoint(x: 364, y: 67),
-                                   CGPoint(x: 392, y: 75),
-                                   CGPoint(x: 422, y: 83),
-                                   CGPoint(x: 452, y: 90),
-                                   CGPoint(x: 481, y: 98),
-                                   CGPoint(x: 510, y: 107),
-                                   CGPoint(x: 536, y: 117),
-                                   CGPoint(x: 563, y: 129)]
+    static var blenderButtonsPositions = [
+        CGPoint(x: 309, y: 57),
+        CGPoint(x: 336, y: 61),
+        CGPoint(x: 364, y: 67),
+        CGPoint(x: 392, y: 75),
+        CGPoint(x: 422, y: 83),
+        CGPoint(x: 452, y: 90),
+        CGPoint(x: 481, y: 98),
+        CGPoint(x: 510, y: 107),
+        CGPoint(x: 536, y: 117),
+        CGPoint(x: 563, y: 129)
+    ]
 
     static var blenderButtonSize = CGSize(width: 20, height: 20)
 
@@ -31,9 +33,9 @@ class ButtonView: NSView {
     static var btnTurnOff = NSButton()
 
     // MARK: - UI NSButton configurations
-    class func initBlenderButtons(to view: NSViewController) {
+    class func addBlenderButtons(to view: NSViewController) {
         for index in 0...blenderButtons.count - 1 {
-            blenderButtons[index] = NSButton(frame: NSRect(origin: blenderButtonsPos[index],
+            blenderButtons[index] = NSButton(frame: NSRect(origin: blenderButtonsPositions[index],
                                                        size: blenderButtonSize))
             blenderButtons[index].title = ""
             blenderButtons[index].tag = index + 1   // tag for which blender speed button was pressed (1-10)
@@ -93,7 +95,7 @@ class ButtonView: NSView {
         return btnReplay
     }
 
-    class func addTurnOffButton() -> NSButton {
+    class func makeTurnOffButton() -> NSButton {
         btnTurnOff = NSButton(frame: NSRect(origin: CGPoint(x: 423, y: 124),
                                             size: CGSize(width: 50, height: 15)))
         btnTurnOff.title = ""
@@ -103,5 +105,4 @@ class ButtonView: NSView {
 
         return btnTurnOff
     }
-
 }
