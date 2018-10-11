@@ -34,7 +34,7 @@
 		ACCA81CA1F0D105900C53288 /* replay-button-appears.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C31F0D105900C53288 /* replay-button-appears.aac */; };
 		ACCA81CB1F0D105900C53288 /* replay-button-hover.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C41F0D105900C53288 /* replay-button-hover.aac */; };
 		ACCA81CC1F0D105900C53288 /* replay-button-pressed.aac in Resources */ = {isa = PBXBuildFile; fileRef = ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */; };
-		ACCA81D11F0D274100C53288 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA81D01F0D274100C53288 /* ButtonView.swift */; };
+		ACCA81D11F0D274100C53288 /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCA81D01F0D274100C53288 /* ButtonFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +67,7 @@
 		ACCA81C31F0D105900C53288 /* replay-button-appears.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-appears.aac"; path = "FrogBlender/Sounds/replay-button-appears.aac"; sourceTree = "<group>"; };
 		ACCA81C41F0D105900C53288 /* replay-button-hover.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-hover.aac"; path = "FrogBlender/Sounds/replay-button-hover.aac"; sourceTree = "<group>"; };
 		ACCA81C51F0D105900C53288 /* replay-button-pressed.aac */ = {isa = PBXFileReference; lastKnownFileType = file; name = "replay-button-pressed.aac"; path = "FrogBlender/Sounds/replay-button-pressed.aac"; sourceTree = "<group>"; };
-		ACCA81D01F0D274100C53288 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		ACCA81D01F0D274100C53288 /* ButtonFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			children = (
 				AC1B9D541F07BA3A00D4A1C9 /* AppDelegate.swift */,
 				AC925B762096168F00350103 /* Constants.swift */,
-				AC925B7A209641DF00350103 /* Views */,
+				AC925B7A209641DF00350103 /* Utility */,
 				AC925B702095FD2700350103 /* View Controllers */,
 				AC925B742095FD6E00350103 /* Storyboards */,
 				AC925B712095FD3C00350103 /* Extensions */,
@@ -156,12 +156,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		AC925B7A209641DF00350103 /* Views */ = {
+		AC925B7A209641DF00350103 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				ACCA81D01F0D274100C53288 /* ButtonView.swift */,
+				ACCA81D01F0D274100C53288 /* ButtonFactory.swift */,
 			);
-			path = Views;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		ACCA81AF1F0AD7FF00C53288 /* Videos */ = {
@@ -310,7 +310,7 @@
 				AC925B772096168F00350103 /* Constants.swift in Sources */,
 				AC847A101F14DEDB0091F2B1 /* AVPlayerViewExtensions.swift in Sources */,
 				AC1B9D571F07BA3A00D4A1C9 /* GameViewController.swift in Sources */,
-				ACCA81D11F0D274100C53288 /* ButtonView.swift in Sources */,
+				ACCA81D11F0D274100C53288 /* ButtonFactory.swift in Sources */,
 				AC925B7920961E8500350103 /* NSImageExtensions.swift in Sources */,
 				AC1B9D551F07BA3A00D4A1C9 /* AppDelegate.swift in Sources */,
 				AC0ADCC1216E8A7C0029E243 /* NSButtonExtension.swift in Sources */,

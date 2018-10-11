@@ -9,12 +9,16 @@
 import AVKit
 
 class GameViewController: NSViewController {
-
     // MARK: Properties
     var videoPlayer = AVPlayer()
     var audioPlayer = AVAudioPlayer()
     var currentlyPlayedVideoName = VideoAssetIdentifier.intro
     var videoPlaybackObserver: Any?
+
+    var speedButtons = Array(repeating: NSButton(), count: Constant.speedButtonCount)
+    var playButton = NSButton()
+    var replayButton = NSButton()
+    var turnOffButton = NSButton()
 
     // MARK: Outlets
     @IBOutlet weak var playerView: AVPlayerView!
@@ -24,6 +28,7 @@ class GameViewController: NSViewController {
         super.viewDidLoad()
 
         configureSelf()
+        makeButtons()
         observeVideoDidPlayToEndTime()
         playVideo(fileNamed: .intro)
     }
@@ -37,9 +42,16 @@ class GameViewController: NSViewController {
 
 // MARK: - Screen configuration
 extension GameViewController {
-    func configureSelf() {
+    private func configureSelf() {
         view.window?.standardWindowButton(.zoomButton)?.isEnabled = false
         view.window?.styleMask.remove(.resizable)
+    }
+
+    private func makeButtons() {
+        speedButtons = ButtonFactory.makeSpeedButtons(for: self)
+        playButton = ButtonFactory.makePlayButton(for: self)
+        replayButton = ButtonFactory.makeReplayButton(for: self)
+        turnOffButton = ButtonFactory.makeTurnOffButton()
     }
 }
 
@@ -54,13 +66,12 @@ extension GameViewController {
             // Action when the actual video is over
                 switch self.currentlyPlayedVideoName {
                 case .intro:
-                    ButtonView.makeBlenderButtons(for: self)
                     self.playVideo(fileNamed: .speed0)
                     self.playerView!.player?.pause()
-                    self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
+                    self.playerView.contentOverlayView?.addSubview(self.playButton)
                 case .speed10:
                     self.playVideo(fileNamed: .outro)
-                    self.playerView.contentOverlayView?.addSubview(ButtonView.makeReplayButton(for: self))
+                    self.playerView.contentOverlayView?.addSubview(self.replayButton)
                     self.playSound(fileNamed: .replayButtonAppears)
                 default:
                     // Loop the actual video, waiting for user interaction (button press)
@@ -112,29 +123,32 @@ extension GameViewController {
 
         // No go back from speed-10, remove the blender speed gear and Turn off buttons
         if sender.tag == 10 {
-            ButtonView.removeBlenderButtons()
-            ButtonView.btnTurnOff.removeFromSuperview()
+            speedButtons.removeFromSuperview()
+            turnOffButton.removeFromSuperview()
         }
     }
 
     @objc func startPlaying() {
         playVideo(fileNamed: .speed0)
 
-        for button in ButtonView.blenderButtons {
-            playerView.contentOverlayView?.addSubview(button)
+        speedButtons.forEach {
+            playerView.contentOverlayView?.addSubview($0)
         }
 
-        playerView.contentOverlayView?.addSubview(ButtonView.makeTurnOffButton())
-        ButtonView.btnPlay.removeFromSuperview()
+        playerView.contentOverlayView?.addSubview(turnOffButton)
+
+        playButton.image = NSImage(named: .playStandard)
+        playButton.removeFromSuperview()
     }
 
     @objc func replayGame() {
         playSound(fileNamed: .replayButtonPressed)
         playVideo(fileNamed: .speed0)
         self.playerView!.player?.pause()
-        self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
+        self.playerView.contentOverlayView?.addSubview(playButton)
 
-        ButtonView.btnReplay.removeFromSuperview()
+        replayButton.image = NSImage(named: .replayStandard)
+        replayButton.removeFromSuperview()
     }
 
     @objc func turnOffBlender() {
@@ -142,9 +156,9 @@ extension GameViewController {
         playVideo(fileNamed: .speed0)
         self.playerView!.player?.pause()
 
-        ButtonView.removeBlenderButtons()
-        ButtonView.btnTurnOff.removeFromSuperview()
-        self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
+        speedButtons.removeFromSuperview()
+        turnOffButton.removeFromSuperview()
+        self.playerView.contentOverlayView?.addSubview(playButton)
     }
 }
 
@@ -154,10 +168,10 @@ extension GameViewController {
         if let buttonType = event.trackingArea?.userInfo?.values.first as? ControlButtonType {
             switch buttonType {
             case .btnPlay:
-                ButtonView.btnPlay.image = NSImage(named: .playHover)
+                playButton.image = NSImage(named: .playHover)
                 playSound(fileNamed: .playButtonHover)
             case .btnReplay:
-                ButtonView.btnReplay.image = NSImage(named: .replayHover)
+                replayButton.image = NSImage(named: .replayHover)
                 playSound(fileNamed: .replayButtonHover)
             case .btnSpeedGear:
                 playSound(fileNamed: .blenderSpeedGearButtonHover)
@@ -169,9 +183,9 @@ extension GameViewController {
         if let buttonType = event.trackingArea?.userInfo?.values.first as? ControlButtonType {
             switch buttonType {
             case .btnPlay:
-                ButtonView.btnPlay.image = NSImage(named: .playStandard)
+                playButton.image = NSImage(named: .playStandard)
             case .btnReplay:
-                ButtonView.btnReplay.image = NSImage(named: .replayStandard)
+                replayButton.image = NSImage(named: .replayStandard)
             case .btnSpeedGear:
                 break
             }

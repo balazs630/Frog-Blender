@@ -17,3 +17,9 @@ extension NSButton {
         self.addTrackingArea(area)
     }
 }
+
+extension Array where Element: NSButton {
+    func removeFromSuperview() {
+        self.forEach { $0.removeFromSuperview() }
+    }
+}

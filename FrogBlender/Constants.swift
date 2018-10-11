@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct Constant {
+    static let speedButtonCount = 10
+}
+
 enum UserInfoKey: String {
     case btnName
 }
