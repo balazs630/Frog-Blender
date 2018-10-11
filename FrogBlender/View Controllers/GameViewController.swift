@@ -54,13 +54,13 @@ extension GameViewController {
             // Action when the actual video is over
                 switch self.currentlyPlayedVideoName {
                 case .intro:
-                    ButtonView.addBlenderButtons(to: self)
+                    ButtonView.makeBlenderButtons(for: self)
                     self.playVideo(fileNamed: .speed0)
                     self.playerView!.player?.pause()
-                    self.playerView.contentOverlayView?.addSubview(ButtonView.addPlayButton(to: self))
+                    self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
                 case .speed10:
                     self.playVideo(fileNamed: .outro)
-                    self.playerView.contentOverlayView?.addSubview(ButtonView.addReplayButton(to: self))
+                    self.playerView.contentOverlayView?.addSubview(ButtonView.makeReplayButton(for: self))
                     self.playSound(fileNamed: .replayButtonAppears)
                 default:
                     // Loop the actual video, waiting for user interaction (button press)
@@ -132,7 +132,7 @@ extension GameViewController {
         playSound(fileNamed: .replayButtonPressed)
         playVideo(fileNamed: .speed0)
         self.playerView!.player?.pause()
-        self.playerView.contentOverlayView?.addSubview(ButtonView.addPlayButton(to: self))
+        self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
 
         ButtonView.btnReplay.removeFromSuperview()
     }
@@ -144,15 +144,15 @@ extension GameViewController {
 
         ButtonView.removeBlenderButtons()
         ButtonView.btnTurnOff.removeFromSuperview()
-        self.playerView.contentOverlayView?.addSubview(ButtonView.addPlayButton(to: self))
+        self.playerView.contentOverlayView?.addSubview(ButtonView.makePlayButton(for: self))
     }
 }
 
 // MARK: - Button mouseover events
 extension GameViewController {
     override func mouseEntered(with event: NSEvent) {
-        if let buttonName = event.trackingArea?.userInfo?.values.first as? ButtonType {
-            switch buttonName {
+        if let buttonType = event.trackingArea?.userInfo?.values.first as? ControlButtonType {
+            switch buttonType {
             case .btnPlay:
                 ButtonView.btnPlay.image = NSImage(named: .playHover)
                 playSound(fileNamed: .playButtonHover)
@@ -166,8 +166,8 @@ extension GameViewController {
     }
 
     override func mouseExited(with event: NSEvent) {
-        if let buttonName = event.trackingArea?.userInfo?.values.first as? ButtonType {
-            switch buttonName {
+        if let buttonType = event.trackingArea?.userInfo?.values.first as? ControlButtonType {
+            switch buttonType {
             case .btnPlay:
                 ButtonView.btnPlay.image = NSImage(named: .playStandard)
             case .btnReplay:

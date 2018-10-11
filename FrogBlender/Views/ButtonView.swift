@@ -33,19 +33,16 @@ class ButtonView: NSView {
     static var btnTurnOff = NSButton()
 
     // MARK: - UI NSButton configurations
-    class func addBlenderButtons(to view: NSViewController) {
+    class func makeBlenderButtons(for destViewController: NSViewController) {
         for index in 0...blenderButtons.count - 1 {
             blenderButtons[index] = NSButton(frame: NSRect(origin: blenderButtonsPositions[index],
-                                                       size: blenderButtonSize))
+                                                           size: blenderButtonSize))
             blenderButtons[index].title = ""
             blenderButtons[index].tag = index + 1   // tag for which blender speed button was pressed (1-10)
             blenderButtons[index].isTransparent = true
             blenderButtons[index].action = #selector(GameViewController.speedButtonClicked(sender:))
-            let area = NSTrackingArea.init(rect: blenderButtons[index].bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
-                                           owner: view,
-                                           userInfo: [UserInfoKey.btnName: ButtonType.btnSpeedGear])
-            blenderButtons[index].addTrackingArea(area)
+            blenderButtons[index].addTrackingArea(for: destViewController,
+                                                  userInfo: [UserInfoKey.btnName: ControlButtonType.btnSpeedGear])
         }
     }
 
@@ -55,43 +52,43 @@ class ButtonView: NSView {
         }
     }
 
-    class func addPlayButton(to view: NSViewController) -> NSButton {
-        if let btnPlayImage = NSImage(named: .playStandard) {
-            let imageWidth = btnPlayImage.size.width
-            let imageHeight = btnPlayImage.size.height
-
-            btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 29, y: 98),
-                                             size: CGSize(width: imageWidth, height: imageHeight)))
-            btnPlay.image = btnPlayImage
-            btnPlay.imagePosition = .imageOnly
-            btnPlay.isBordered = false
-            btnPlay.action = #selector(GameViewController.startPlaying)
-            let area = NSTrackingArea.init(rect: btnPlay.bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
-                                           owner: view,
-                                           userInfo: [UserInfoKey.btnName: ButtonType.btnPlay])
-            btnPlay.addTrackingArea(area)
+    class func makePlayButton(for destViewController: NSViewController) -> NSButton {
+        guard let btnPlayImage = NSImage(named: .playStandard) else {
+            fatalError("Image for btnPlayImage cannot be found.")
         }
+
+        let imageWidth = btnPlayImage.size.width
+        let imageHeight = btnPlayImage.size.height
+
+        btnPlay = NSButton(frame: NSRect(origin: CGPoint(x: 29, y: 98),
+                                         size: CGSize(width: imageWidth, height: imageHeight)))
+        btnPlay.image = btnPlayImage
+        btnPlay.imagePosition = .imageOnly
+        btnPlay.isBordered = false
+        btnPlay.action = #selector(GameViewController.startPlaying)
+        btnPlay.addTrackingArea(for: destViewController,
+                                userInfo: [UserInfoKey.btnName: ControlButtonType.btnPlay])
+
         return btnPlay
     }
 
-    class func addReplayButton(to view: NSViewController) -> NSButton {
-        if let btnReplayImage = NSImage(named: .replayStandard) {
-            let imageWidth = btnReplayImage.size.width
-            let imageHeight = btnReplayImage.size.height
-
-            btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 756, y: 23),
-                                               size: CGSize(width: imageWidth, height: imageHeight)))
-            btnReplay.image = btnReplayImage
-            btnReplay.imagePosition = .imageOnly
-            btnReplay.isBordered = false
-            btnReplay.action = #selector(GameViewController.replayGame)
-            let area = NSTrackingArea.init(rect: btnReplay.bounds,
-                                           options: [.mouseEnteredAndExited, .activeAlways],
-                                           owner: view,
-                                           userInfo: [UserInfoKey.btnName: ButtonType.btnReplay])
-            btnReplay.addTrackingArea(area)
+    class func makeReplayButton(for destViewController: NSViewController) -> NSButton {
+        guard let btnReplayImage = NSImage(named: .replayStandard) else {
+            fatalError("Image for btnReplayImage cannot be found.")
         }
+
+        let imageWidth = btnReplayImage.size.width
+        let imageHeight = btnReplayImage.size.height
+
+        btnReplay = NSButton(frame: NSRect(origin: CGPoint(x: 756, y: 23),
+                                           size: CGSize(width: imageWidth, height: imageHeight)))
+        btnReplay.image = btnReplayImage
+        btnReplay.imagePosition = .imageOnly
+        btnReplay.isBordered = false
+        btnReplay.action = #selector(GameViewController.replayGame)
+        btnReplay.addTrackingArea(for: destViewController,
+                                  userInfo: [UserInfoKey.btnName: ControlButtonType.btnReplay])
+
         return btnReplay
     }
 

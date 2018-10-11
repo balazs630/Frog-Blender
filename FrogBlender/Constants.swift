@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum ButtonType: String {
+enum UserInfoKey: String {
+    case btnName
+}
+
+enum ControlButtonType: String {
     case btnPlay
     case btnReplay
     case btnSpeedGear
@@ -17,10 +21,6 @@ enum ButtonType: String {
 enum FileType: String {
     case aac
     case mp4
-}
-
-enum UserInfoKey: String {
-    case btnName
 }
 
 enum ImageAssetIdentifier: String {
